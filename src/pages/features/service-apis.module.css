@@ -1,0 +1,189 @@
+@import './compute-apis.module.css';
+
+/* Overview Section */
+.overview {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.overview h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.overviewText {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Code Section */
+.codeSection {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.codeSection h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.codeDescription {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+}
+
+/* Deployment Section */
+.deployment {
+  padding: 80px 0;
+}
+
+.deployment h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+}
+
+.deploymentModes {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.modeItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.modeReverse {
+  direction: rtl;
+}
+
+.modeReverse .modeContent {
+  direction: ltr;
+}
+
+.modeReverse .modeImage {
+  direction: ltr;
+}
+
+.modeContent h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.modeContent p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.modeImage {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.benefits h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 16px;
+}
+
+.benefitBullet {
+  width: 20px;
+  height: 20px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.benefitItem h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.benefitItem p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.benefitItem p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .modeItem {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .modeReverse {
+    direction: ltr;
+  }
+
+  .modeImage {
+    max-width: 400px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview,
+  .codeSection,
+  .deployment,
+  .benefits {
+    padding: 60px 0;
+  }
+}

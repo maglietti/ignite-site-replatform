@@ -1,0 +1,150 @@
+---
+title: In-Memory Data Grid
+description: The Apache Ignite in-memory data grid accelerates and scales out distributed databases, services, and APIs. Learn more about an IMDG with Apache Ignite.
+---
+
+import Hero from '@site/src/components/common/Hero';
+import styles from './use-case.module.css';
+
+<Hero
+  title={<>In-Memory Data Grid<br/><span className="hero-subtitle">With Apache Ignite</span></>}
+  description="Use an advanced read-through / write-through cache that is deployed on top of one or several databases"
+  primaryButton={{
+    text: "Start Coding",
+    href: "https://ignite.apache.org/docs/latest/index"
+  }}
+  image="/img/usecases/datagrid/hero-image.svg"
+/>
+
+## In-Memory Data Grid with Apache Ignite
+
+In-memory data grid with Apache Ignite **accelerates and scales** your existing databases and data stores.
+
+## In-Memory Data Grid Overview
+
+### What is an in-memory data grid?
+
+An in-memory data grid (IMDG) is an advanced read-through/write-through cache that is deployed on top of multiple databases.
+
+Applications write to and read from the grid, and the grid propagates changes to the underlying data stores in a consistent way.
+
+### How does an in-memory data grid work?
+
+Co-location is the main IMDG feature. It organizes related data for storage in the same node and enables low latency with high throughput computing.
+
+Co-located applications can access in-memory data without network movement.
+
+In an in-memory data grid queries are processed at high speeds and scaled to multiple nodes, because there's no distance between data and applications.
+
+<div className={styles.architectureImage}>
+  <img src="/img/usecases/datagrid/image.svg" alt="In-memory data grid architecture" />
+</div>
+
+## Apache Ignite as a Data Grid Supports a Variety of Developer APIs
+
+<div className={styles.apiGrid}>
+  <div>
+    <h3>Essential Developer APIs</h3>
+    <div className={styles.apiItem}>
+      <img src="/img/features/03-distributed-SQL.svg" alt="SQL" />
+      <p>SQL</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/05-key-value-APIs.svg" alt="Key-Value" />
+      <p>Key-value</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/04-ACID-transactions.svg" alt="ACID Transactions" />
+      <p>ACID transactions</p>
+    </div>
+    <p>Enable you to request, join, and group distributed datasets.</p>
+  </div>
+
+  <div>
+    <h3>High-Performance Computing APIs</h3>
+    <div className={styles.apiItem}>
+      <img src="/img/features/06-compute-APIs.svg" alt="Compute" />
+      <p>Compute</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/07-machine-learning.svg" alt="Machine Learning" />
+      <p>Machine learning</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/08-services.svg" alt="Services" />
+      <p>Services</p>
+    </div>
+    <p>Execute logic close to the data, thus eliminating expensive data shuffling over the network.</p>
+  </div>
+
+  <div>
+    <h3>Real-Time Streaming APIs</h3>
+    <div className={styles.apiItem}>
+      <img src="/img/features/09-streaming.svg" alt="Streaming" />
+      <p>Streaming</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/10-continuous-queries.svg" alt="Continuous Queries" />
+      <p>Continuous Queries</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/11-messaging.svg" alt="Messaging" />
+      <p>Messaging</p>
+    </div>
+    <p>Allow the seamless implementation of event-driven architectures.</p>
+  </div>
+</div>
+
+## Native Persistence And In-Memory Data
+
+When [native persistence](/architecture/native-persistence) is enabled, Ignite stores both data and indexes on disk, thus eliminating the time-consuming cache warm-up step.
+
+Native persistence keeps a full copy of data on disk, so you are free to cache a subset of records in memory.
+
+If a required data record is missing from memory, Ignite reads the record from the disk automatically.
+
+## Common Use Cases
+
+An in-memory data grid is frequently used when a business works with large datasets at low latency and high throughput.
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <p>Increase the performance and scalability of real-time applications and external databases.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <p>Support <a href="/use-cases/high-performance-computing">high-performance computing.</a></p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <p>Cache data that is scattered across databases.</p>
+  </div>
+</div>
+
+## In-Memory Data Grid Ignite User Stories
+
+### Agilent Technologies Inc.
+
+Agilent improved its online channel by implementing in-memory solutions. They leveraged an in-memory data grid to achieve faster time-to-market, and data flexibility across digital channels.
+
+[Watch: Leveraging In Memory Data Grid For Faster Time To Market](https://www.youtube.com/watch?v=78UE11GrWzk&t=2586s)
+
+### ING Bank
+
+ING Bank used in-memory computing platforms to meet increasing demand for performance and scalability.
+
+[Watch: Embracing The Service Consumption Shift In Banking](https://www.youtube.com/watch?v=CPmwnjDJ1Sk&feature=emb_imp_woyt)
+
+---
+
+## Ready to Start?
+
+Discover our quick start guide and build your first application in 5-10 minutes.
+
+[Quick Start Guide](https://ignite.apache.org/docs/latest/) →
+
+## Want to View More Use-Cases?
+
+Read the In-Memory Database article.
+
+[In-Memory Database](/use-cases/in-memory-database) →

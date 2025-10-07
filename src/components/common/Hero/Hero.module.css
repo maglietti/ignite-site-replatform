@@ -1,0 +1,184 @@
+/**
+ * Hero Component Styles
+ *
+ * Following Apache Ignite design system.
+ * Supports multiple color variants and responsive behavior.
+ */
+
+.hero {
+  position: relative;
+  padding: 8rem 0 11rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero__content {
+  min-height: 300px;
+  max-width: 830px;
+  width: 65%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+}
+
+.hero__image {
+  flex-shrink: 0;
+  max-width: 400px;
+}
+
+.hero__image img {
+  width: 100%;
+  height: auto;
+}
+
+.hero__subtitle {
+  margin-bottom: var(--space-sm);
+  color: var(--ignite-grey-5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+.hero__title {
+  margin-bottom: var(--space-md);
+  color: var(--ignite-dark-1);
+}
+
+.hero__description {
+  margin-bottom: var(--space-lg);
+  color: var(--ignite-grey-5);
+  max-width: 700px;
+  font-weight: 400;
+}
+
+.hero__cta {
+  margin-top: 5rem;
+}
+
+/* Variants */
+.hero--default {
+  background-color: #fff;
+}
+
+.hero--blue {
+  background-color: var(--ignite-blue-primary);
+  color: #fff;
+}
+
+.hero--blue .hero__subtitle,
+.hero--blue .hero__title,
+.hero--blue .hero__description {
+  color: #fff;
+}
+
+.hero--blue .hero__description {
+  opacity: 0.8;
+}
+
+.hero--dark {
+  background-color: var(--ignite-dark-1);
+}
+
+.hero--dark .hero__subtitle,
+.hero--dark .hero__title,
+.hero--dark .hero__description {
+  color: #fff;
+}
+
+.hero--dark .hero__subtitle {
+  opacity: 0.9;
+}
+
+.hero--dark .hero__description {
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .hero {
+    padding: 6rem 0 9rem;
+  }
+
+  .hero__container {
+    padding: 0 var(--container-padding-mobile);
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .hero__content {
+    width: auto;
+    min-height: auto;
+  }
+
+  .hero__image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 5rem 0 6rem;
+  }
+
+  .hero__content {
+    max-width: none;
+    width: auto;
+    min-height: auto;
+  }
+
+  .hero__content br {
+    display: none;
+  }
+
+  .hero__subtitle {
+    padding-bottom: 2rem;
+  }
+
+  .hero__title {
+    font-size: 4.4rem;
+    line-height: 1.15;
+  }
+
+  .hero__cta {
+    margin-top: 3rem;
+  }
+
+  .hero__description {
+    max-width: 100%;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .hero--default {
+  background-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .hero--default .hero__title {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .hero--default .hero__subtitle,
+[data-theme='dark'] .hero--default .hero__description {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .hero--blue {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+[data-theme='dark'] .hero--blue .hero__title {
+  color: var(--ifm-color-primary-light);
+}

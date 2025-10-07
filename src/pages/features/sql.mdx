@@ -1,0 +1,244 @@
+---
+title: Distributed ANSI SQL Database - Apache Ignite
+description: Apache Ignite comes with an ANSI-99 compliant, horizontally scalable, and fault-tolerant SQL engine that allows you to interact with Ignite as with a regular SQL database. Ignite can function in a pure in-memory mode in which it shows the highest performance.
+---
+
+import CodeTabs from '@site/src/components/features/CodeTabs';
+import styles from './sql.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Distributed ANSI SQL</h1>
+        <p className={styles.heroDescription}>
+          The same SQL you've been using for years but now with<br />
+          in-memory speed and at unlimited scale
+        </p>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/sql/hero-image.svg" alt="SQL Hero" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.sqlDatabase}>
+  <div className="container">
+    <div className={styles.databaseContent}>
+      <div className={styles.databaseInfo}>
+        <h2 className="h4">Apache Ignite as a SQL Database</h2>
+        <p>
+          The native support for SQL let's you work with Ignite as with a standard SQL database.
+          You can use simply SQL if your applications need nothing else:
+        </p>
+
+        <div className={styles.commandsGrid}>
+          <div className={styles.commandBox}>
+            <h3>DDL commands</h3>
+            <div className={styles.commandList}>
+              <span>CREATE</span>
+              <span>ALTER</span>
+              <span>DROP</span>
+            </div>
+          </div>
+
+          <div className={styles.commandBox}>
+            <h3>DML commands</h3>
+            <div className={styles.commandList}>
+              <span>SELECT</span>
+              <span>INSERT</span>
+              <span>UPDATE</span>
+              <span>MERGE</span>
+              <span>DELETE</span>
+            </div>
+          </div>
+        </div>
+
+        <h3>Apache Ignite is shipped with:</h3>
+        <div className={styles.shipsWith}>
+          <div className={styles.shipsItem}>
+            <div className={styles.bullet}></div>
+            <span>JDBC driver</span>
+          </div>
+          <div className={styles.shipsItem}>
+            <div className={styles.bullet}></div>
+            <span>ODBC driver</span>
+          </div>
+          <div className={styles.shipsItem}>
+            <div className={styles.bullet}></div>
+            <div>
+              <strong>Built-in SQL APIs</strong>
+              <span className={styles.shipsNote}>Available for Java, C#, C++, Python, and other programming languages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="/img/features/sql/image.svg" alt="SQL Database" className={styles.databaseImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.distributedJoins}>
+  <div className="container">
+    <h2 className="h4">Join, Group and Aggregate Distributed Data Sets</h2>
+    <p className={styles.subtitle}>
+      Whether you use a two or thousand-node cluster, you can always do the following:
+    </p>
+
+    <div className={styles.capabilities}>
+      <span>group data</span>
+      <span>join data</span>
+      <span>order data</span>
+      <span>aggregate data</span>
+    </div>
+
+    <h3 className={styles.sectionTitle}>What is a distributed join?</h3>
+    <div className="h4" style={{ marginBottom: '2rem' }}>
+      A distributed join is a SQL statement with a join clause that combines two or more tables
+      that have their data distributed across many cluster nodes.
+    </div>
+
+    <h3 className="h4">Types of joins in Ignite</h3>
+    <div className={styles.joinTypes}>
+      <div className={styles.joinType}>
+        <h4>Co-located joins</h4>
+        <p>
+          These are the most performant types of joins that avoid data shuffling between nodes
+          and minimize network usage.
+        </p>
+        <p>
+          This type of join is used if you join{' '}
+          <a href="https://ignite.apache.org/docs/latest/data-modeling/affinity-collocation" target="_blank">
+            partitioned and replicated tables
+          </a>{' '}
+          or partitioned tables that are co-located with each other.
+        </p>
+      </div>
+
+      <div className={styles.joinType}>
+        <h4>Non-colocated joins</h4>
+        <p>
+          A less performant type of join that joins data of non-colocated tables. Ignite needs to
+          shuffle data over the network to produce a correct result set.
+        </p>
+      </div>
+
+      <div className={styles.joinType}>
+        <h4>Hash joins</h4>
+        <p>
+          Ignite supports classic hash join algorithm that is more efficient than nested loop joins
+          for many scenarios.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.multiTier}>
+  <div className="container">
+    <h2 className="h4">Ignite SQL Engine and Multi-Tier Storage</h2>
+    <p>Depending on your storage configuration, Ignite SQL engine can query both in-memory and disk-only records</p>
+
+    <div className={styles.tierModes}>
+      <div className={styles.tierMode}>
+        <h3>In-Memory Mode</h3>
+        <p>Ignite caches data only in memory</p>
+        <details className={styles.tierDetails}>
+          <summary>
+            <img src="/img/features/sql/plus.svg" alt="Expand" />
+          </summary>
+          <div className={styles.tierContent}>
+            <p>
+              In this mode, Ignite SQL carries out tasks as quickly as possible, as long as all the data
+              is served from memory, with no usage of the disk tier at all.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div className={styles.tierMode}>
+        <h3>In-Memory + Native Persistence Mode</h3>
+        <p>Ignite scales beyond available memory capacity</p>
+        <details className={styles.tierDetails}>
+          <summary>
+            <img src="/img/features/sql/plus.svg" alt="Expand" />
+          </summary>
+          <div className={styles.tierContent}>
+            <p>
+              Ignite persists 100% of data and indexes in the{' '}
+              <a href="/architecture/native-persistence">native persistence</a> while caching as much as
+              possible in memory.
+            </p>
+            <p>
+              Ignite SQL engine does not require the caching of entire data set in memory to operate correctly.
+            </p>
+            <p>
+              If the engine finds that a record is not cached, then it will read the record from disk.
+              Your application only executes SQL queries, and Ignite gets the records from both memory and
+              disk automatically.
+            </p>
+            <p>
+              On cluster restarts, Ignite reads data and indexes from disk, eliminating the need for memory
+              warm-up, which significantly decreases downtime.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div className={styles.tierMode}>
+        <h3>In-Memory + External Database Mode</h3>
+        <p>Ignite accelerates your existing databases</p>
+        <details className={styles.tierDetails}>
+          <summary>
+            <img src="/img/features/sql/plus.svg" alt="Expand" />
+          </summary>
+          <div className={styles.tierContent}>
+            <p>
+              In this mode, the Ignite SQL engine requires caching of all the data needed for distributed
+              queries in memory, since the engine does not currently support federated queries.
+            </p>
+            <p>
+              If federated queries between Ignite and an external database are required, then you can
+              consider Ignite integration for Spark, where the DataFrames API can combine the data stored
+              in Ignite and other systems.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Discover more details about Apache Ignite SQL engine and apply it for your use-case</p>
+        <a href="https://ignite.apache.org/docs/latest/sql/sql-api" className="arrowlink" target="_blank">
+          SQL API Documentation
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Ignite SQL will become even more powerful and advanced with the release of the Apache Calcite based engine</p>
+        <div className={styles.comingSoon}>Coming in Ignite 3.0</div>
+        <a href="https://cwiki.apache.org/confluence/display/IGNITE/Apache+Calcite-powered+SQL+Engine+Roadmap" className="arrowlink" target="_blank">
+          New Calcite powered SQL engine
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

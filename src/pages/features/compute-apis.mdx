@@ -1,0 +1,193 @@
+---
+title: Apache Ignite Compute APIs - Data-Intensive Computing
+description: Apache Ignite compute APIs allow you to perform computations at high speeds. Achieve high performance, low latency, and linear scalability in data-intensive computing.
+---
+
+import CodeTabs from '@site/src/components/features/CodeTabs';
+import styles from './compute-apis.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Compute APIs</h1>
+        <p className={styles.heroDescription}>
+          Develop custom tasks in contemporary languages<br />
+          and get the logic executed over a distributed cluster
+        </p>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/compute-apis/compute-hero.svg" alt="Compute APIs" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.benefits}>
+  <div className="container">
+    <h2 className="h4">Execute Data-Intensive And Compute-Intensive Tasks At High Speed</h2>
+    <p className={styles.subtitle}>Get an order-of-magnitude performance increase for custom complex logic:</p>
+
+    <div className={styles.benefitsGrid}>
+      <div className={styles.benefitItem}>
+        <img src="/img/features/compute-apis/icon-one.svg" alt="" className={styles.benefitIcon} />
+        <p>By minimizing or avoiding network utilization</p>
+      </div>
+      <div className={styles.benefitItem}>
+        <img src="/img/features/compute-apis/icon-two.svg" alt="" className={styles.benefitIcon} />
+        <p>By executing the logic straight on the cluster nodes</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.features}>
+  <div className="container">
+    <h2>Benefits Of Apache Ignite Compute APIs</h2>
+
+    <div className={styles.featuresGrid}>
+      <div className={styles.featureItem}>
+        <div className={styles.featureBullet}></div>
+        <div>
+          <h3>Broadcast or execute on specific nodes</h3>
+          <p>Broadcast your tasks to use all the CPUs of your distributed cluster.</p>
+          <p>Or schedule the tasks for execution on a subset of the nodes based on custom criteria</p>
+        </div>
+      </div>
+
+      <div className={styles.featureItem}>
+        <div className={styles.featureBullet}></div>
+        <div>
+          <h3>Load balance your logic</h3>
+          <p>
+            If some of the nodes are overutilized, Ignite can automatically load-balance your computations
+            to other nodes.
+          </p>
+          <p>
+            There are three ways to enable that: Round-robin load balancing, Random and weighted load balancing,
+            Job stealing.
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.featureItem}>
+        <div className={styles.featureBullet}></div>
+        <div>
+          <h3>Execute computations in a fault-tolerant way</h3>
+          <p>
+            Some computations might take minutes or hours to complete, e.g. drug discovery or logistics simulations.
+          </p>
+          <p>
+            You don't need to start from scratch if the execution fails in the middle. Restart a calculation
+            from the point of failure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.codeSection}>
+  <div className="container">
+    <h2 className="h4">Forget about PLSQL, use the language you code with daily</h2>
+    <p className={styles.codeDescription}>
+      Create tasks in the language of your choice. You don't need to learn PLSQL any more.
+    </p>
+
+    <CodeTabs
+      examples={[
+        {
+          language: 'java',
+          label: 'Java',
+          code: `// Broadcast the task to server nodes only.
+IgniteCompute compute = ignite.compute(ignite.cluster().forServers());
+
+// Each remote server node will execute the logic of the task/lambda below.
+compute.broadcast(() -> System.out.println(
+  "Hello Node: " + ignite.cluster().localNode().id()));`
+        },
+        {
+          language: 'csharp',
+          label: 'C#/.NET',
+          code: `// Broadcast the task to server nodes only.
+var compute = ignite.GetCluster().ForServers().GetCompute();
+
+// Each remote server node will execute the custom PrintNodeIdAction task.
+compute.Broadcast(new PrintNodeIdAction());`
+        },
+        {
+          language: 'cpp',
+          label: 'C++',
+          code: `// Broadcast the task to server nodes only.
+IgniteCompute compute = ignite.compute(ignite.cluster().forServers());
+
+// Each remote server node will execute the logic of the task/lambda below.
+compute.broadcast(() -> System.out.println(
+  "Hello Node: " + ignite.cluster().localNode().id()));`
+        }
+      ]}
+    />
+  </div>
+</section>
+
+<section className={styles.example}>
+  <div className="container">
+    <h2>Example Of Logic Building</h2>
+    <h3 className="h4">Execute the logic in place and eliminate network impact on the performance of the calculation</h3>
+    <p className={styles.exampleIntro}>
+      Imagine that a winter storm is about to hit a highly-populated city. As a telecommunication company,
+      you have to send a text message to 20 million residents warning them about the blizzard.
+    </p>
+
+    <div className={styles.comparisonGrid}>
+      <div className={styles.comparisonItem + ' ' + styles.badApproach}>
+        <img src="/img/features/icon-check-err.svg" alt="" className={styles.comparisonIcon} />
+        <p>
+          With the client-server approach, the company would read 20 million records from a database to
+          an application that executes some logic before finally sending a message to the residents.
+        </p>
+      </div>
+
+      <div className={styles.comparisonItem}>
+        <img src="/img/features/icon-check-ok.svg" alt="" className={styles.comparisonIcon} />
+        <p>
+          A much more efficient approach would be to broadcast this logic to the cluster nodes that keep
+          data about the city's residents. The logic gets executed on those nodes only and text messages
+          are sent from there.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Start coding distributed computing APIs</p>
+        <a href="https://ignite.apache.org/docs/latest/distributed-computing/distributed-computing" className="arrowlink" target="_blank">
+          Performing Distributed Computing
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Learn more about high-performance computing use cases and see how it works in practice</p>
+        <a href="/use-cases/high-performance-computing" className="arrowlink">
+          High-Performance Computing Use-Cases
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

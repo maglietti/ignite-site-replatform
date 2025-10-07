@@ -1,0 +1,111 @@
+/**
+ * Button Component Styles
+ *
+ * Following Apache Ignite design system tokens defined in custom.css.
+ * Uses CSS Modules for component-scoped styling.
+ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  padding: 0 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+  outline: none;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+/* Variants */
+.button--primary {
+  background-color: var(--ignite-blue-primary);
+  color: #fff;
+}
+
+.button--primary:hover {
+  background-color: var(--ignite-blue-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.button--secondary {
+  background-color: var(--ignite-red-primary);
+  color: #fff;
+}
+
+.button--secondary:hover {
+  background-color: var(--ignite-red-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.button--shadow {
+  background: #fff;
+  color: var(--ignite-blue-primary);
+  border: 1px solid var(--ignite-blue-primary);
+}
+
+.button--shadow:hover {
+  background: var(--ignite-blue-pale);
+  text-decoration: none;
+}
+
+.button--link {
+  background: transparent;
+  color: var(--ignite-blue-primary);
+  padding: 0;
+  height: auto;
+}
+
+.button--link:hover {
+  color: var(--ignite-blue-dark);
+  text-decoration: underline;
+}
+
+/* Sizes */
+.button--small {
+  height: 4rem;
+  padding: 0 1.5rem;
+  font-size: 1.4rem;
+}
+
+.button--large {
+  height: 6rem;
+  padding: 0 3rem;
+  font-size: 1.8rem;
+}
+
+/* Disabled state */
+.button--disabled {
+  background: var(--ignite-grey-4);
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.button--disabled:hover {
+  background: var(--ignite-grey-4);
+  transform: none;
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .button--shadow {
+  background: transparent;
+  color: var(--ifm-color-primary-light);
+  border-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .button--shadow:hover {
+  background: rgba(66, 165, 245, 0.1);
+}

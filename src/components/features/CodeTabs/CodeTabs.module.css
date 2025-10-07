@@ -1,0 +1,103 @@
+/**
+ * CodeTabs Component Styles
+ *
+ * Tabbed interface for multi-language code examples.
+ * Uses Docusaurus CodeBlock component for syntax highlighting.
+ */
+
+.codeTabs {
+  margin: var(--space-md) 0;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.tabList {
+  display: flex;
+  background: var(--ignite-grey-3);
+  border-bottom: 2px solid var(--ignite-grey-2);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab {
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ignite-grey-5);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+}
+
+.tab:hover {
+  color: var(--ignite-blue-primary);
+  background: rgba(0, 112, 204, 0.05);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--ignite-blue-primary);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+.tabActive {
+  color: var(--ignite-blue-primary);
+  border-bottom-color: var(--ignite-blue-primary);
+  background: rgba(0, 112, 204, 0.08);
+}
+
+.tabPanel {
+  background: var(--ifm-code-background);
+}
+
+/* Remove margin from nested CodeBlock */
+.tabPanel > div {
+  margin: 0;
+  border-radius: 0;
+}
+
+.error {
+  padding: var(--space-md);
+  color: var(--ignite-red-primary);
+  background: var(--ignite-red-pale-2);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+}
+
+/* Dark mode */
+[data-theme='dark'] .tabList {
+  background: #2d2d2d;
+  border-bottom-color: #3d3d3d;
+}
+
+[data-theme='dark'] .tab {
+  color: #9c9c9c;
+}
+
+[data-theme='dark'] .tab:hover {
+  color: var(--ifm-color-primary-light);
+  background: rgba(66, 165, 245, 0.1);
+}
+
+[data-theme='dark'] .tabActive {
+  color: var(--ifm-color-primary-light);
+  border-bottom-color: var(--ifm-color-primary-light);
+  background: rgba(66, 165, 245, 0.15);
+}
+
+[data-theme='dark'] .error {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .tab {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 1.3rem;
+  }
+}

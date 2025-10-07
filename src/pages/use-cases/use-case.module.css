@@ -1,0 +1,128 @@
+.advantagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.advantageItem h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-text);
+}
+
+.advantageItem p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+}
+
+.apiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.apiItem img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.apiItem p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.architectureImage {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.architectureImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.benefitItem {
+  padding: 1.5rem;
+  background: var(--card-background);
+  border-radius: 8px;
+}
+
+.benefitItem h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--primary-text);
+}
+
+.benefitItem p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+}
+
+.useCaseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.useCaseItem {
+  text-align: center;
+}
+
+.useCaseItem img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.useCaseItem h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-text);
+}
+
+.useCaseItem p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+}
+
+.twoColumnLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.twoColumnLayout p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .advantagesGrid,
+  .apiGrid,
+  .benefitsGrid,
+  .useCaseGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .twoColumnLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

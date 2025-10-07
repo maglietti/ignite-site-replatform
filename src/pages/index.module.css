@@ -1,23 +1,395 @@
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * Homepage Styles
+ *
+ * Styles for the Apache Ignite homepage.
+ * Uses design tokens from custom.css.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+/* Hero Section */
+.hero {
+  padding: 9rem 0 19rem;
   text-align: center;
+  background: url('/img/frontpage/blue-grad.jpg') center top no-repeat;
+  background-size: 100% 100%;
   position: relative;
   overflow: hidden;
+  color: #000;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+.heroTitle {
+  margin-bottom: var(--space-md);
+  color: var(--ignite-dark-1);
+}
+
+.heroSubtitle {
+  margin-bottom: var(--space-xl);
+  color: var(--ignite-grey-5);
+}
+
+.heroAction {
+  display: flex;
+  justify-content: center;
+}
+
+/* Top Cards Section */
+.topCards {
+  padding: 0 0 var(--space-xl);
+  background: var(--ignite-blue-pale);
+  position: relative;
+}
+
+.cardsGrid {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 30px;
+  transform: translateY(-60px);
+}
+
+.topCard {
+  width: calc(50% - 15px);
+  padding: 40px;
+  background: #fff;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+
+.topCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+
+.topCardTitle {
+  color: var(--ignite-dark-1);
+  margin-bottom: var(--space-md);
+}
+
+.topCardIcon {
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.topCardIcon img {
+  max-width: 100px;
+  height: auto;
+}
+
+.badges {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.badge {
+  flex: 1;
+  min-width: 100px;
+  padding: var(--space-sm);
+  background: var(--ignite-blue-pale);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--ignite-blue-dark);
+}
+
+/* Features Section */
+.features {
+  padding-top: calc(15rem - 65px);
+  padding-bottom: 10rem;
+  background: var(--ignite-blue-pale);
+}
+
+.featuresTitle {
+  text-align: center;
+  color: #000;
+  margin-bottom: var(--space-3xl);
+}
+
+.featuresWrap {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.featuresMenu {
+  padding-top: 3.2rem;
+  width: 30rem;
+  flex-shrink: 0;
+}
+
+.featuresMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featuresMenu li:not(:last-child) {
+  margin-bottom: 4.3rem;
+}
+
+.featuresMenu button {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.featuresMenu button:hover {
+  color: var(--ignite-blue-primary);
+}
+
+.activeFeature {
+  padding-left: 23px !important;
+  font-weight: 700 !important;
+}
+
+.activeFeature::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 34px;
+  background: #000;
+  transform: translateY(-50%);
+}
+
+.viewAll {
+  display: inline-block;
+  margin-top: 5.5rem;
+  color: #000;
+  text-decoration: underline;
+  font-size: 2rem;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.featureContent {
+  position: relative;
+  min-width: 0;
+  flex-grow: 1;
+  max-width: 866px;
+}
+
+.featureTitle {
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+}
+
+.featureDescription {
+  margin-bottom: var(--space-lg);
+  color: #000;
+  line-height: 1.6;
+  max-width: 750px;
+}
+
+.featureAction {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.featureAction button,
+.featureAction a {
+  padding-left: 45px;
+  padding-right: 45px;
+  font-size: 20px;
+  height: 53px;
+  display: inline-flex;
+}
+
+/* Use Cases Section */
+.useCases {
+  padding-top: 13rem;
+  padding-bottom: 6rem;
+  background: #fff;
+}
+
+.useCasesTitle {
+  text-align: center;
+  color: var(--ignite-dark-1);
+  margin-bottom: var(--space-3xl);
+}
+
+.useCasesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-top: 5rem;
+}
+
+/* Stories Section */
+.stories {
+  padding: var(--space-4xl) 0;
+  background: var(--ignite-grey-1);
+}
+
+.storiesContainer {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.storiesTitle {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+@media (max-width: 1199px) {
+  .storiesContainer {
+    padding: 0 var(--container-padding-mobile);
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Dark Mode */
+[data-theme='dark'] .hero {
+  background: linear-gradient(
+    180deg,
+    var(--ifm-background-color) 0%,
+    rgba(33, 150, 243, 0.1) 100%
+  );
+}
+
+[data-theme='dark'] .heroTitle {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .heroSubtitle {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .topCards {
+  background: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .topCard {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .topCardTitle {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .badge {
+  background: rgba(33, 150, 243, 0.2);
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .features {
+  background: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .featuresWrap {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .featuresMenu button {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .featuresMenu button:hover {
+  background: rgba(33, 150, 243, 0.1);
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .activeFeature {
+  background: var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .viewAll {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .featureDescription {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .useCases {
+  background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .useCasesTitle {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .stories {
+  background: #0d0d0d;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .hero {
+    padding: 6rem 0 14rem;
+  }
+
+  .featuresWrap {
+    flex-direction: column;
+  }
+
+  .featuresMenu {
+    width: 100%;
+    border-bottom: 1px solid var(--ignite-grey-2);
+    padding-bottom: var(--space-lg);
+  }
+
+  .featureContent {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .cardsGrid {
+    flex-direction: column;
+  }
+
+  .topCard {
+    width: 100%;
+  }
+
+  .useCasesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
+
+  .topCard {
+    min-height: auto;
+  }
+
+  .badges {
+    flex-direction: column;
+  }
+
+  .badge {
+    min-width: auto;
+  }
+
+  .featuresWrap {
+    padding: var(--space-md);
+  }
+
+  .featuresMenu button {
+    font-size: 1.6rem;
+  }
 }

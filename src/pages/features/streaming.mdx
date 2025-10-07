@@ -1,0 +1,166 @@
+---
+title: Apache Ignite Streaming, Real-Time Data Processing
+description: Apache Ignite data loading, streaming, and real-time processing capabilities allow to inject large amounts of data into an Ignite cluster in a scalable and fault-tolerant way. Learn more here.
+---
+
+import styles from './streaming.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Real-Time Streaming<br />APIs</h1>
+        <p className={styles.heroDescription}>
+          Ingest streams of data and build event-driven architectures
+        </p>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/streaming/hero-image.svg" alt="Streaming Hero" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.intro}>
+  <div className="container">
+    <div className={styles.introContent}>
+      <p className="h4">
+        With Apache Ignite you can <strong>load and stream</strong> large finite — or never-ending — volumes
+        of data <strong>in a scalable and fault-tolerant way</strong> into the cluster.
+      </p>
+      <div className={styles.speedHighlight}>
+        <img src="/img/features/streaming/speed.png" alt="Speed" className={styles.speedIcon} />
+        <p>
+          The rate at which data can be injected into Ignite <strong>exceeds millions of events per second</strong> on
+          a moderately sized cluster.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.coreApis}>
+  <div className="container">
+    <div className={styles.coreContent}>
+      <div className={styles.coreText}>
+        <h2 className="h4">Ignite Core Streaming APIs</h2>
+
+        <h3>What are those APIs?</h3>
+        <p>
+          With Ignite core streaming APIs such as IgniteDataStreamer you get basic streaming capabilities
+          out of the box. You can stream and transform your data originating from multiple custom sources.
+        </p>
+        <p>
+          Ignite data streamers automatically buffer the data and group it into batches for better performance,
+          and send it in parallel to multiple nodes.
+        </p>
+      </div>
+      <img src="/img/features/streaming/sql.svg" alt="Core APIs" className={styles.coreImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.usedFor}>
+  <div className="container">
+    <h2 className="h4">IgniteDataStreamer is used for:</h2>
+
+    <div className={styles.usagesGrid}>
+      <div className={styles.usageBlock}>
+        <div className={styles.usageItem}>
+          <div className={styles.usageBullet}></div>
+          <span>Data loading</span>
+        </div>
+        <div className={styles.usageItem}>
+          <div className={styles.usageBullet}></div>
+          <span>Real-time data streaming</span>
+        </div>
+      </div>
+
+      <div className={styles.usageBlock}>
+        <div className={styles.usageItem}>
+          <div className={styles.usageBullet}></div>
+          <span>Achieving advanced streaming capabilities by integrating with streaming frameworks:</span>
+        </div>
+
+        <div className={styles.frameworkIcons}>
+          <div className={styles.iconRow}>
+            <img src="/img/features/streaming/one.png" alt="Kafka" />
+            <img src="/img/features/streaming/two.svg" alt="Flink" />
+            <img src="/img/features/streaming/three.png" alt="Storm" />
+          </div>
+          <div className={styles.iconRow}>
+            <img src="/img/features/streaming/four.svg" alt="Camel" />
+            <img src="/img/features/streaming/five.svg" alt="MQTT" />
+            <img src="/img/features/streaming/six.svg" alt="Spark" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.eventDriven}>
+  <div className="container">
+    <h2 className="h4">Event-Driven Architecture Basic Principles</h2>
+    <p className={styles.eventIntro}>
+      In many cases, streams of data we receive comprise events that we have to react to.
+      <br />
+      <span className={styles.highlight}>With Apache Ignite, you can:</span>
+    </p>
+
+    <div className={styles.principlesGrid}>
+      <div className={styles.principle}>
+        <div className={styles.principleNumber}>01</div>
+        <p>Enrich and transform your data on the fly.</p>
+      </div>
+
+      <div className={styles.principle}>
+        <div className={styles.principleNumber}>02</div>
+        <p>Execute any calculations in response to an event on the cluster-node side.</p>
+      </div>
+
+      <div className={styles.principle}>
+        <div className={styles.principleNumber}>03</div>
+        <div>
+          <p>React to your streams of data on the application side with continuous queries.</p>
+          <p className={styles.principleNote}>
+            If streamed data represents an event, your application-side logic can react to it after receiving
+            a notification from continuous queries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Start coding with Ignite Streaming APIs</p>
+        <a href="https://ignite.apache.org/docs/latest/data-streaming" className="arrowlink" target="_blank">
+          Ignite Streaming APIs
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Explore our out-of-the-box integrations with Kafka, Flink, MQTT and other advanced streaming technologies</p>
+        <a href="https://ignite.apache.org/docs/latest/extensions-and-integrations/streaming/kafka-streamer" className="arrowlink" target="_blank">
+          Extensions And Integrations Guide
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

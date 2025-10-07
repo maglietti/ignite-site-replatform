@@ -1,0 +1,267 @@
+/**
+ * Use Cases Overview Page Styles
+ *
+ * Layout for the use cases landing page with hero, card grids,
+ * and informational sections about HTAP and Digital Integration Hub.
+ */
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+  background: #fff;
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.heroMain {
+  flex: 1;
+  max-width: 720px;
+}
+
+.heroPre {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  color: var(--ignite-blue-primary);
+  padding-bottom: 2.4rem;
+}
+
+.heroTitle {
+  padding-bottom: 1.6rem;
+}
+
+.heroDescription {
+  padding-top: 1.6rem;
+  color: var(--ignite-dark-1);
+}
+
+.heroImage {
+  width: 570px;
+  height: auto;
+  position: absolute;
+  bottom: -230px;
+  left: 80%;
+  transform: none;
+}
+
+/* ============================================================================
+   SECTION STRUCTURE
+   ============================================================================ */
+
+.section {
+  padding: 8rem 0;
+}
+
+.sectionLabel {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ignite-dark-1);
+  padding-bottom: 4rem;
+  margin: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 6rem;
+}
+
+.sectionHeaderLeft {
+  flex: 0 0 430px;
+  padding-right: 3rem;
+}
+
+.sectionHeaderRight {
+  flex: 1;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: var(--ignite-dark-1);
+}
+
+.sectionHeaderRight p {
+  margin: 0 0 1.6rem 0;
+}
+
+.sectionHeaderRight p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   CARD GRID
+   ============================================================================ */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 4rem 3rem;
+}
+
+.cardWrapper {
+  display: flex;
+}
+
+.cardWrapperLong {
+  /* Optional styling for cards with longer text */
+}
+
+.useCaseCard {
+  width: 100%;
+}
+
+/* ============================================================================
+   HTAP SECTION
+   ============================================================================ */
+
+.htapSection {
+  padding-top: 12rem;
+  padding-bottom: 6rem;
+}
+
+.htapBlock {
+  margin-bottom: 0;
+}
+
+.htapBlock:not(:last-child) {
+  padding-bottom: 10rem;
+}
+
+.htapButton {
+  margin-top: 2rem;
+  display: inline-block;
+}
+
+/* ============================================================================
+   OTHER USE CASES SECTION
+   ============================================================================ */
+
+.otherSection {
+  padding-top: 10rem;
+  padding-bottom: 12rem;
+}
+
+/* ============================================================================
+   DARK MODE
+   ============================================================================ */
+
+[data-theme='dark'] .hero {
+  background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .heroPre {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .heroDescription {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .sectionLabel {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .sectionHeaderRight {
+  color: var(--ifm-font-color-secondary);
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   ============================================================================ */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heroImage {
+    width: 450px;
+    bottom: -180px;
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .hero {
+    padding: 6rem 0;
+  }
+
+  .heroContent {
+    flex-direction: column;
+  }
+
+  .heroMain {
+    max-width: 100%;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .section {
+    padding: 6rem 0;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .sectionHeaderLeft {
+    flex: 1 1 auto;
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .sectionHeaderRight {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .htapSection {
+    padding-top: 0;
+  }
+
+  .htapBlock:not(:last-child) {
+    padding-bottom: 8rem;
+  }
+
+  .otherSection {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
+  .sectionHeaderLeft {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+}

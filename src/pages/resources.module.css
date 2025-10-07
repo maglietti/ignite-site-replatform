@@ -1,0 +1,757 @@
+/**
+ * Resources Page Styles
+ *
+ * Comprehensive resource hub with multiple sections:
+ * - Hero with centered content and background
+ * - Technical resources grid (documentation, wiki, repositories)
+ * - Learning resources with video cards
+ * - Training courses grid
+ * - Book showcase with testimonial
+ * - Mailing lists with interactive popups
+ */
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+  background: linear-gradient(180deg, #f6f6f6 0%, #ffffff 100%);
+  padding: 8rem 0 10rem;
+  text-align: center;
+  position: relative;
+}
+
+.heroImage {
+  width: 220px;
+  height: auto;
+  margin: 0 auto 3rem;
+  display: block;
+}
+
+.heroTitle {
+  color: var(--ignite-dark-1);
+  margin-bottom: 2.4rem;
+}
+
+.heroDescription {
+  color: var(--ignite-dark-2);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================================================================
+   TECHNICAL RESOURCES SECTION
+   ============================================================================ */
+
+.technicalResources {
+  padding: 8rem 0;
+}
+
+.technicalGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.technicalItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.technicalHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-height: 60px;
+}
+
+.technicalHeader img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.technicalHeader h2 {
+  margin: 0;
+  color: var(--ignite-dark-1);
+}
+
+.technicalCard {
+  background: #fff;
+  border: 1px solid var(--ignite-grey-2);
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+
+.technicalCard h3 {
+  margin: 0;
+  color: var(--ignite-dark-1);
+}
+
+.technicalText {
+  color: var(--ignite-dark-1);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  flex-grow: 1;
+}
+
+.technicalText p {
+  margin-bottom: 1.2rem;
+}
+
+.technicalText p:last-child {
+  margin-bottom: 0;
+}
+
+.technicalText ul {
+  margin: 0;
+}
+
+.technicalAction,
+.technicalActionRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.technicalActionRow {
+  flex-wrap: wrap;
+}
+
+/* ============================================================================
+   LEARNING RESOURCES - VIDEOS SECTION
+   ============================================================================ */
+
+.learningResources {
+  background: var(--ignite-grey-1);
+  padding: 8rem 0;
+}
+
+.sectionTitleWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.sectionTitleWithIcon img {
+  width: 48px;
+  height: 48px;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.videoCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.videoBox {
+  margin-bottom: 2rem;
+}
+
+.videoScreen {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-normal);
+}
+
+.videoScreen:hover {
+  transform: scale(1.02);
+}
+
+.videoScreen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity var(--transition-normal);
+}
+
+.videoScreen:hover img {
+  opacity: 0.9;
+}
+
+.videoTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+  width: 100%;
+}
+
+.videoSubtitle {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  z-index: 2;
+}
+
+.videoDescription {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--ignite-dark-1);
+}
+
+.videoDescription p {
+  margin: 0;
+}
+
+.youtubeLink {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.youtubeLink a {
+  color: var(--ignite-blue-primary);
+  text-decoration: underline;
+}
+
+.youtubeLink a:hover {
+  color: var(--ignite-blue-dark);
+}
+
+/* ============================================================================
+   TRAINING AND COURSES SECTION
+   ============================================================================ */
+
+.training {
+  padding: 8rem 0;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.courseCard {
+  background: #fff;
+  border: 1px solid var(--ignite-grey-2);
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+}
+
+.courseTitle {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: var(--ignite-dark-1);
+  margin: 0;
+  min-height: 7.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.courseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.courseDescription {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--ignite-dark-1);
+  flex-grow: 1;
+  margin: 0;
+}
+
+.trainingBottom {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* ============================================================================
+   BOOK SECTION
+   ============================================================================ */
+
+.book {
+  padding: 8rem 0;
+  background: var(--ignite-grey-1);
+}
+
+.bookContent {
+  display: flex;
+  gap: 6rem;
+  margin-top: 5rem;
+  align-items: flex-start;
+}
+
+.bookImageWrap {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.bookImageWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bookText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.bookRecommendation {
+  color: var(--ignite-dark-2);
+  margin: 0;
+}
+
+.bookQuote {
+  color: var(--ignite-dark-1);
+  margin: 0;
+  font-style: italic;
+  position: relative;
+  padding-left: 3rem;
+  border-left: 4px solid var(--ignite-blue-primary);
+}
+
+.bookAuthor {
+  padding-top: 1rem;
+}
+
+.bookAuthorName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ignite-dark-1);
+  margin-bottom: 0.5rem;
+}
+
+.bookAuthorTitle {
+  font-size: 1.6rem;
+  color: var(--ignite-dark-2);
+}
+
+/* ============================================================================
+   MAILING LISTS SECTION
+   ============================================================================ */
+
+.mailingLists {
+  padding: 8rem 0;
+}
+
+.mailingListsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.mailingList {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--ignite-grey-2);
+}
+
+.mailingList:last-child {
+  border-bottom: none;
+}
+
+.mailingListTitle {
+  margin: 0;
+  color: var(--ignite-dark-1);
+}
+
+.mailingListContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mailingListLabel {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ignite-dark-1);
+  margin: 0;
+}
+
+.stackOverflowSection {
+  margin-top: 2rem;
+}
+
+.mailingListContent p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--ignite-dark-1);
+  margin: 0;
+}
+
+.mailingListButtons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+}
+
+.mailingListButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  border: 1px solid var(--ignite-grey-2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  color: var(--ignite-dark-1);
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.mailingListButton:hover {
+  border-color: var(--ignite-blue-primary);
+  color: var(--ignite-blue-primary);
+}
+
+.mailingListButton img {
+  width: 20px;
+  height: 20px;
+}
+
+.popupButton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #fff;
+  border: 1px solid var(--ignite-grey-2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  color: var(--ignite-dark-1);
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+
+.popupButton:hover {
+  border-color: var(--ignite-blue-primary);
+  color: var(--ignite-blue-primary);
+}
+
+.emailIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.stackIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.popup {
+  position: absolute;
+  bottom: calc(100% + 1rem);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--ignite-grey-2);
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 300px;
+  animation: fadeIn 0.2s ease;
+}
+
+.popup p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.popup p:last-child {
+  margin-bottom: 0;
+}
+
+.popup strong {
+  font-weight: 700;
+  word-break: break-all;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================================
+   FAQ SECTION
+   ============================================================================ */
+
+.faqSection {
+  padding: 8rem 0;
+  background: var(--ignite-blue-pale);
+}
+
+.faqCard {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faqCard h2 {
+  color: var(--ignite-dark-1);
+  margin-bottom: 2rem;
+}
+
+.faqCard p {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: var(--ignite-dark-2);
+  margin-bottom: 3rem;
+}
+
+/* ============================================================================
+   DARK MODE
+   ============================================================================ */
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(180deg, #1b1b1d 0%, #1e1e1e 100%);
+}
+
+[data-theme='dark'] .heroTitle,
+[data-theme='dark'] .technicalCard h3,
+[data-theme='dark'] .technicalHeader h2,
+[data-theme='dark'] .videoDescription,
+[data-theme='dark'] .courseTitle,
+[data-theme='dark'] .courseDescription,
+[data-theme='dark'] .bookQuote,
+[data-theme='dark'] .bookAuthorName,
+[data-theme='dark'] .mailingListTitle,
+[data-theme='dark'] .mailingListLabel,
+[data-theme='dark'] .mailingListContent p,
+[data-theme='dark'] .faqCard h2 {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .heroDescription,
+[data-theme='dark'] .technicalText,
+[data-theme='dark'] .bookRecommendation,
+[data-theme='dark'] .bookAuthorTitle,
+[data-theme='dark'] .faqCard p {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .learningResources,
+[data-theme='dark'] .book {
+  background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .technicalCard,
+[data-theme='dark'] .courseCard {
+  background: var(--ifm-background-surface-color);
+  border-color: #3d3d3d;
+}
+
+[data-theme='dark'] .mailingList {
+  border-bottom-color: #3d3d3d;
+}
+
+[data-theme='dark'] .mailingListButton,
+[data-theme='dark'] .popupButton {
+  background: var(--ifm-background-surface-color);
+  border-color: #3d3d3d;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .mailingListButton:hover,
+[data-theme='dark'] .popupButton:hover {
+  border-color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .popup {
+  background: var(--ifm-background-surface-color);
+  border-color: #3d3d3d;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .faqSection {
+  background: #1a2b3a;
+}
+
+/* ============================================================================
+   RESPONSIVE - TABLET
+   ============================================================================ */
+
+@media (max-width: 1024px) {
+  .technicalGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookContent {
+    gap: 4rem;
+  }
+
+  .bookImageWrap {
+    width: 250px;
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE - MOBILE
+   ============================================================================ */
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 6rem 0 8rem;
+  }
+
+  .heroImage {
+    width: 150px;
+    margin-bottom: 2rem;
+  }
+
+  .heroTitle {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+
+  .technicalResources,
+  .learningResources,
+  .training,
+  .book,
+  .mailingLists,
+  .faqSection {
+    padding: 6rem 0;
+  }
+
+  .technicalGrid {
+    margin-top: 3rem;
+  }
+
+  .technicalHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    min-height: auto;
+  }
+
+  .technicalCard {
+    padding: 2rem;
+  }
+
+  .videoGrid {
+    grid-template-columns: 1fr;
+    margin-top: 3rem;
+  }
+
+  .coursesGrid {
+    margin-top: 3rem;
+  }
+
+  .courseCard {
+    padding: 2rem;
+  }
+
+  .courseTitle {
+    min-height: auto;
+  }
+
+  .bookContent {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .bookImageWrap {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .bookQuote {
+    padding-left: 2rem;
+  }
+
+  .mailingListsGrid {
+    margin-top: 3rem;
+  }
+
+  .mailingList {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .mailingListButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mailingListButton,
+  .popupButton {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .popup {
+    position: fixed;
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4rem);
+    max-width: 350px;
+  }
+}

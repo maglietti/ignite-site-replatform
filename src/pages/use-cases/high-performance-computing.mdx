@@ -1,0 +1,156 @@
+---
+title: High-Performance Computing, HPC Cluster
+description: Apache Ignite enables high-performance computing by providing APIs for data and compute-intensive calculations. Using Ignite as a HPC cluster, you can turn your commodity hardware or cloud environment into a distributed supercomputer.
+---
+
+import Hero from '@site/src/components/common/Hero';
+import styles from './use-case.module.css';
+
+<Hero
+  title={<>High-Performance<br/>Computing<br/><span className="hero-subtitle">With Apache Ignite</span></>}
+  description="Minimize network utilization by executing kilobyte-size custom code over petabytes of data"
+  primaryButton={{
+    text: "Start Coding",
+    href: "https://ignite.apache.org/docs/latest/index"
+  }}
+  image="/img/usecases/high-peformance/hero.svg"
+/>
+
+## High-Performance Computing Overview
+
+### What is high-performance computing?
+
+High-performance computing is the ability to process data and perform complex calculations at high speeds.
+
+You keep all your data on the cluster node and execute your kilobyte-size custom code over petabytes of data, avoiding network-like utilization.
+
+### How it works
+
+**In traditional disk-based systems, such as relational or NoSQL databases:**
+
+Client applications usually bring data from servers, use the records for local calculations, and discard the data as soon as the business task is completed.
+
+This approach does not scale well if a significant volume of data gets transferred over the network.
+
+**In in-memory computing systems, such as Apache Ignite:**
+
+Apache Ignite supports a co-located processing technique. The primary aim of this technique is to increase the performance of your data-intensive or compute-intensive calculations by running them straight on Ignite cluster nodes.
+
+In co-located processing, calculations are done on local data sets of the cluster nodes. This avoids records shuffling over the network and eliminates the impact of network latency on the performance of your applications.
+
+<div className={styles.architectureImage}>
+  <img src="/img/usecases/high-peformance/perf-pic.svg" alt="High-performance computing architecture" />
+  <div className={styles.architectureLegend}>
+    <p>1 – Map Phase</p>
+    <p>2 – Execution Phase</p>
+    <p>3 – Reduce Phase</p>
+  </div>
+</div>
+
+## Benefits Of Apache Ignite Compute APIs
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <h3>Broadcast or execute on specific nodes</h3>
+    <p>Broadcast your tasks to use all the CPUs of your distributed cluster.</p>
+    <p>Or execute your computations on a specific group of nodes.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>Load balance your queries</h3>
+    <p>If some of the nodes are over-utilized, Ignite can load balance your calculations to the other node.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>All computations are fault-tolerant</h3>
+    <p>Some computations might take minutes or hours to complete, e.g. drug discovery or logistics planning. You don't need to start from the very beginning if something goes wrong.</p>
+  </div>
+</div>
+
+## Sample Data- And Compute-Intensive Tasks That Leverage High-Performance Computing
+
+<div className={styles.useCaseGrid}>
+  <div className={styles.useCaseItem}>
+    <img src="/img/usecases/high-peformance/icon-perf1.svg" alt="Finance" />
+    <h3>Finance</h3>
+    <p>e.g. fraud-detection, risk management, financial modeling</p>
+  </div>
+
+  <div className={styles.useCaseItem}>
+    <img src="/img/usecases/high-peformance/icon-perf2.svg" alt="Retail & Hospitality" />
+    <h3>Retail & Hospitality</h3>
+    <p>e.g. recommendation systems, 360 customer experience</p>
+  </div>
+
+  <div className={styles.useCaseItem}>
+    <img src="/img/usecases/high-peformance/icon-perf3.svg" alt="Media & Entertainment" />
+    <h3>Media & Entertainment</h3>
+    <p>e.g. creating animations, rendering special effects</p>
+  </div>
+
+  <div className={styles.useCaseItem}>
+    <img src="/img/usecases/high-peformance/icon-perf4.svg" alt="Logistic and transportation" />
+    <h3>Logistic and transportation</h3>
+    <p>e.g. logistics planning, detecting potential hazardous situations</p>
+  </div>
+
+  <div className={styles.useCaseItem}>
+    <img src="/img/usecases/high-peformance/icon-perf5.svg" alt="Biotech" />
+    <h3>Biotech</h3>
+    <p>e.g. drug and vaccine discovery, sequencing DNA</p>
+  </div>
+</div>
+
+## High-Performance Computing Ignite User Stories
+
+### Personalized websites with dynamically changing content
+
+Whenever you visit Amazon, Walmart, Booking, or other websites, you see personalized content, such as relevant deals made especially for you.
+
+Personalized content that takes your age, location, preferences, and previous interactions into consideration is processed and displayed in just a few seconds thanks to high-performance computing tasks that process gigabytes of data within a second.
+
+**HomeAway** – rental website with personalized offers
+
+[Watch: An Ignite Compute Grid In The Cloud](https://www.youtube.com/watch?v=qYd9GGRC4L0)
+
+### Data-driven modelling and simulations
+
+To create a new vaccine or drug you have to run thousands or millions of simulations to come up with the best formula.
+
+**E-Therapeutics** uses Apache Ignite capabilities for drug discovery.
+
+[Watch: Data-Driven Drug Discovery](https://www.youtube.com/watch?v=PFHb-UuhGkk)
+
+**nference.ai** – high-performance compute APIs used to define different statistical analyses and execute numerical data in real time.
+
+[Watch: How nference.ai Leverages Ignite For Distributed Analytics In The Bioinformatics Domain](https://www.youtube.com/watch?v=NUxdoL-K9Ys)
+
+### Logistic and transportation companies use advanced calculations for logistics planning
+
+**Dutch Railways** have thousands of different trains to deliver cargo and people across the country. They need to calculate how all those trains should be moving in real time. These calculations also happen with high compute APIs.
+
+[Watch: Detecting Potential Hazardous Situations In The Dutch Railway Planning Using Apache Ignite](https://www.youtube.com/watch?v=wkCW8YC8eKU)
+
+### Real-time analytics enables fast and precise decisions
+
+High-performance computing allows the processing of unlimited data sets, with analysis taking only seconds.
+
+**JPMorgan Chase** use Apache Ignite for heavy computations which help to make effective exposure management.
+
+[Watch: High-Performance Exposure Management With Apache Ignite](https://www.youtube.com/watch?v=jF9T2cJB6t0)
+
+[Watch: Real Time Exposure Management Using Ignite](https://www.youtube.com/watch?v=B8A8yR_e6VM)
+
+---
+
+## Ready to Start?
+
+Discover our quick start guide and build your first application in 5-10 minutes.
+
+[Quick Start Guide](https://ignite.apache.org/docs/latest/) →
+
+## Want to View More Use-Cases?
+
+Check out success stories from different industries across the world.
+
+[Ignite User Stories](/use-cases/proven-use-cases) →

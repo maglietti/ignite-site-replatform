@@ -1,0 +1,140 @@
+---
+title: Distributed In-Memory Cache
+description: Apache Ignite as a Distributed In-Memory Cache accelerates and scales your databases, services, and APIs. Learn more about the cache-aside deployment and the read-through/write-through caching strategies with Apache Ignite.
+---
+
+import Hero from '@site/src/components/common/Hero';
+import styles from './use-case.module.css';
+
+<Hero
+  title={<>Distributed <br/>In-Memory Cache<br/><span className="hero-subtitle">With Apache Ignite</span></>}
+  description="Improve the performance and scalability of your applications, databases, and microservices with Apache Ignite"
+  primaryButton={{
+    text: "Start Coding",
+    href: "https://ignite.apache.org/docs/latest/index"
+  }}
+  image="/img/usecases/in-memory-hero.svg"
+/>
+
+## What Is In-Memory Cache?
+
+In-memory cache is a storage layer placed between applications and databases. The cache keeps your hot data in memory to offload existing databases and accelerate applications.
+
+## Advantages of Distributed In-Memory Cache
+
+A distributed in-memory cache is **the most straightforward and scalable** way to accelerate your existing applications and databases, thanks to:
+
+<div className={styles.advantagesGrid}>
+  <div className={styles.advantageItem}>
+    <h3>Speed</h3>
+    <p>Memory as a storage layer provides the lowest latency and highest throughput. Laws of physics.</p>
+  </div>
+
+  <div className={styles.advantageItem}>
+    <h3>Scale</h3>
+    <p>Horizontal scalability lets you grow the cluster size to an unlimited extent to accommodate data size and throughput.</p>
+  </div>
+</div>
+
+## Unlike Standard In-Memory Caches, Apache Ignite Supports Essential Developers APIs
+
+<div className={styles.apiGrid}>
+  <div className={styles.apiItem}>
+    <img src="/img/features/in-memory/01-ACID-Transactions.svg" alt="ACID Transactions" />
+    <p>ACID transactions to ensure consistency of data</p>
+  </div>
+
+  <div className={styles.apiItem}>
+    <img src="/img/features/in-memory/02-sql.svg" alt="SQL" />
+    <p>SQL queries execution</p>
+  </div>
+
+  <div className={styles.apiItem}>
+    <img src="/img/features/in-memory/03-user.svg" alt="Custom Computations" />
+    <p>Custom computations, e.g. on Java, available</p>
+  </div>
+</div>
+
+## Read-Through / Write-Through Caching
+
+### How It Works
+
+*The read-through/write-through caching strategy can be classified as an in-memory, data-grid type of deployment.*
+
+When Apache Ignite is deployed as a data grid, the application layer begins to treat Ignite as the primary store.
+
+As applications write to and read from the data grid, Ignite ensures that all underlying external databases stay updated and are consistent with the in-memory data.
+
+<div className={styles.architectureImage}>
+  <picture>
+    <source media="(min-width: 1024px)" srcSet="/img/features/in-memory/write-through-caching.svg" />
+    <img src="/img/features/in-memory/write-through-caching-mob.svg" alt="Write-through caching architecture" />
+  </picture>
+</div>
+
+### When It Works
+
+**This strategy is recommended for architectures that need to:**
+
+- accelerate disk-based databases
+- create a shared caching layer across various data sources
+
+Ignite integrates with many databases out-of-the-box and, in write-through or write-behind mode, can synchronize all changes to the databases.
+
+The strategy also applies to ACID transactions: Ignite will coordinate and commit a transaction across its in-memory cluster as well as to a relational database.
+
+Read-through capability implies that, if a record is missing from memory, a cache can read the data from an external database. Ignite fully supports this capability for key-value APIs.
+
+When you use Ignite SQL, you must preload the dataset into memory—because Ignite SQL can query on-disk data only if the data is stored in native persistence.
+
+## Cache-Aside Deployment
+
+<div className={styles.architectureImage}>
+  <picture>
+    <source media="(min-width: 1024px)" srcSet="/img/features/in-memory/cache-aside-deployment.svg" />
+    <img src="/img/features/in-memory/cache-aside-deployment-mob.svg" alt="Cache-aside deployment architecture" />
+  </picture>
+</div>
+
+### When It Works
+
+This strategy works well in two cases:
+
+1. The cached data is relatively static, i.e. not updated frequently
+2. A temporary data lag is allowed between the primary store and the cache
+
+It's usually assumed that changes will be fully replicated eventually and, thus, the cache and the primary store will become consistent.
+
+### Cache-Aside Deployment And Native Persistence
+
+When Apache Ignite is deployed in a cache-aside configuration, its native persistence can be used as a disk store for Ignite datasets. [Native persistence](/architecture/native-persistence) allows for the elimination of the time-consuming cache warm-up step.
+
+As native persistence maintains a full copy of data on disk, you can cache a subset of records in memory. If a required data record is missing from memory, then Ignite reads the record from the disk automatically, regardless of which API you use—be it SQL, key-value, or scan queries.
+
+**Benefits:**
+
+- Seconds needed for recovery
+- Full copy of cached records is duplicated on disk
+- Use any API: SQL, key-value, or scan queries
+
+## In-Memory Cache User Stories
+
+### Raiffeisen Bank
+
+As users transition to digital channels, the load on the bank's systems has increased. Therefore, load reduction and system scaling are constant and top priorities.
+
+[Watch: Apache Ignite, Load Reduction and System Scaling for Banking](https://www.youtube.com/watch?v=Mhtt2QL_qCQ)
+
+---
+
+## Ready to Start?
+
+Discover our quick start guide and build your first application in 5-10 minutes.
+
+[Quick Start Guide](https://ignite.apache.org/docs/latest/#quick-start-guides) →
+
+## Want to View More Use-Cases?
+
+Read In-Memory Data Grid article.
+
+[In-Memory Data Grid](/use-cases/in-memory-data-grid) →

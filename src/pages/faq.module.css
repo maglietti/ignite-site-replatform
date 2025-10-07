@@ -1,0 +1,368 @@
+/**
+ * FAQ Page Styles
+ *
+ * Styles for the Frequently Asked Questions page including hero section,
+ * about section, features grid, FAQ cards, and call-to-action section.
+ */
+
+/* Hero Section */
+.hero {
+  padding: 12rem 0 15rem;
+  background: var(--ignite-gradient-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.heroContent {
+  max-width: 660px;
+  position: relative;
+  z-index: 2;
+}
+
+.heroDescription {
+  color: var(--ignite-dark-1);
+  line-height: 1.5;
+}
+
+.heroImage {
+  position: absolute;
+  right: -290px;
+  top: 54px;
+  max-width: 600px;
+  height: auto;
+}
+
+/* About Section */
+.about {
+  padding: 13rem 0;
+}
+
+.aboutWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.aboutLeft {
+  width: calc(50% + 30px);
+  flex-shrink: 0;
+}
+
+.aboutLeft p:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+.aboutRight {
+  margin-top: 2rem;
+  margin-left: auto;
+  width: 295px;
+  max-width: 100%;
+  flex-shrink: 0;
+  border-top: 1px solid var(--ignite-dark-1);
+}
+
+.aboutNum {
+  padding-top: 2rem;
+  color: var(--ignite-blue-primary);
+  font-weight: 700;
+}
+
+.aboutRightBot {
+  margin-top: 18rem;
+  border-top: 1px solid var(--ignite-dark-1);
+  padding-top: 2rem;
+}
+
+/* Features Section */
+.features {
+  padding-bottom: 11rem;
+}
+
+.featuresTitle {
+  font-weight: 700;
+}
+
+.featuresWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: calc(100% - 10rem);
+  gap: 3rem;
+}
+
+.feature {
+  width: calc(100% / 3 - 90px);
+}
+
+.featureIconWrap {
+  background: var(--ignite-grey-light);
+  border-radius: 1rem;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureIconWrap img {
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.featureText {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+/* FAQ Grid Section */
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 3rem;
+  padding-bottom: 13rem;
+}
+
+.faqCard {
+  padding: 6rem 7rem 13rem;
+  background: #fff;
+  border: 1px solid var(--ignite-grey-2);
+  border-radius: 10px;
+  position: relative;
+  min-height: 29rem;
+  transition: box-shadow 0.4s ease;
+}
+
+.faqCard:hover {
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faqCardTitle {
+  font-weight: 700;
+  color: var(--ignite-dark-1);
+}
+
+.faqCardAnswer {
+  color: var(--ignite-blue-primary);
+  font-weight: 600;
+}
+
+.faqCardText {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--ignite-dark-1);
+}
+
+.faqCardText p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.faqCardText a {
+  color: var(--ignite-blue-primary);
+  text-decoration: underline;
+}
+
+.faqCardText a:hover {
+  color: var(--ignite-blue-dark);
+}
+
+.faqCardBottom {
+  position: absolute;
+  left: 7rem;
+  bottom: 5rem;
+}
+
+/* Call To Action Section */
+.cta {
+  background: var(--ignite-grey-light);
+  padding: 8rem 0;
+}
+
+.cta .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.ctaContent {
+  flex: 1;
+}
+
+.ctaTitle {
+  font-weight: 700;
+}
+
+.ctaAction {
+  flex-shrink: 0;
+}
+
+/* Dark Mode */
+[data-theme='dark'] .hero {
+  background: var(--ignite-gradient-dark-blue);
+}
+
+[data-theme='dark'] .heroDescription {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .aboutRight {
+  border-top-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .aboutRightBot {
+  border-top-color: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .featureIconWrap {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .faqCard {
+  background: var(--ifm-background-surface-color);
+  border-color: #3d3d3d;
+}
+
+[data-theme='dark'] .faqCard:hover {
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .faqCardTitle {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .faqCardText {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .cta {
+  background: var(--ifm-background-surface-color);
+}
+
+/* Responsive - Large Tablets (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .featuresWrap {
+    width: auto;
+  }
+
+  .feature {
+    width: calc(100% / 3 - 30px);
+  }
+
+  .faqCard {
+    padding: 5rem 5rem 13rem;
+  }
+
+  .faqCardBottom {
+    left: 5rem;
+  }
+}
+
+/* Responsive - Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .heroImage {
+    display: none;
+  }
+
+  .aboutRight {
+    width: auto;
+  }
+}
+
+/* Responsive - Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .hero {
+    padding: 8rem 0 10rem;
+  }
+
+  .about {
+    padding: 8rem 0 10rem;
+  }
+
+  .aboutWrap {
+    flex-direction: column;
+  }
+
+  .aboutLeft {
+    width: auto;
+  }
+
+  .aboutRight {
+    margin-left: 0;
+    margin-top: 5rem;
+  }
+
+  .aboutRightBot {
+    margin-top: 0;
+    padding-top: 1rem;
+    border-top: none;
+  }
+
+  .featuresTitle br {
+    display: none;
+  }
+
+  .features {
+    padding-bottom: 5rem;
+  }
+
+  .featuresWrap {
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+
+  .feature {
+    width: auto;
+    padding-bottom: 4rem;
+  }
+
+  .featureText {
+    max-width: 80%;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+    padding-bottom: 8rem;
+  }
+
+  .faqCard {
+    padding: 3rem 2rem 3rem;
+  }
+
+  .faqCardTitle {
+    font-size: 2.4rem;
+  }
+
+  .faqCardBottom {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin-top: 2rem;
+  }
+
+  .cta {
+    padding: 5rem 0;
+  }
+
+  .cta .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ctaContent {
+    width: 100%;
+  }
+
+  .ctaAction {
+    width: 100%;
+  }
+}

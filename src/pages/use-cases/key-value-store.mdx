@@ -1,0 +1,84 @@
+---
+title: Key-Value Store / Database
+description: Apache Ignite is the best and fastest key-value database that stores data both in memory and on disk with support for key-value, SQL, ACID transactions, compute, and machine learning APIs.
+---
+
+import Hero from '@site/src/components/common/Hero';
+import styles from './use-case.module.css';
+
+<Hero
+  title={<>Key-Value Store<br/><span className="hero-subtitle">With Apache Ignite</span></>}
+  description="Distributed store for high-performance data access"
+  primaryButton={{
+    text: "Start Coding",
+    href: "https://ignite.apache.org/docs/latest/index"
+  }}
+  image="/img/usecases/key-value/hero-image.svg"
+/>
+
+## What is a Key-Value Store?
+
+A key-value store is a data storage software. It stores, retrieves, and manages data as a set of unique keys. Each one is associated with one and only one value.
+
+### How a Key-Value Store Works
+
+A key-value store, or a key-value database, holds a collection of data records in various fields. The data records have unique keys to retrieve and modify records quickly.
+
+<div className={styles.architectureImage}>
+  <img src="/img/usecases/key-value/image.svg" alt="Key-value store architecture" />
+</div>
+
+## Benefits Of Key-Value Store
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <h3>Low-latency access and high-performance</h3>
+    <p>Thanks to their design, key-value stores can perform many more operations in a given amount of time than other database models</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>Horizontal scalability</h3>
+    <p>Key-value stores can keep and process large volumes of data by scaling horizontally</p>
+  </div>
+</div>
+
+## With Apache Ignite, a Key-Value Store Can Cache Data in Memory and Persist it on Disk
+
+The [native persistence](/architecture/native-persistence) feature eliminates the time-consuming cache warm-up step as well as the data reloading phase from external databases.
+
+Since native persistence always keeps a full copy of data on disk, you are free to cache a subset of records in memory.
+
+If a required data record is missing in memory, then Ignite reads it from disk automatically, regardless of the API you use.
+
+## Key-Value Store is Used When **Speed and Scale are Top Priorities**
+
+<div className={styles.useCaseGrid}>
+  <div className={styles.useCaseItem}>
+    <h3>User sessions caching</h3>
+    <p>Key-value stores are used to accumulate user session details in web applications to personalize content.</p>
+  </div>
+
+  <div className={styles.useCaseItem}>
+    <h3>360 Customer View</h3>
+    <p>Applications can collect user preferences and behavioral patterns to offer better services. The records can be stored in a key-value database to enable fast customer data lookups.</p>
+  </div>
+
+  <div className={styles.useCaseItem}>
+    <h3>Back-end systems acceleration</h3>
+    <p>Developers use key-value stores to cache specific records that don't require a regular update. This reduces the load on core back-end systems and databases.</p>
+  </div>
+</div>
+
+---
+
+## Ready to Start?
+
+Discover our quick start guide and build your first application in 5-10 minutes.
+
+[Quick Start Guide](https://ignite.apache.org/docs/latest/) →
+
+## Want to Learn More?
+
+Check out Ignite key-value APIs article.
+
+[Key-Value APIs](/features/key-value-apis) →

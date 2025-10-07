@@ -1,0 +1,115 @@
+---
+title: Apache Hadoop Performance Acceleration
+description: Achieve the performance acceleration of Hadoop-based systems by deploying Ignite as an in-memory computing platform designated for low-latency, high-throughput and real-time operations while Hadoop continues to be used for long-running OLAP workloads.
+---
+
+import Hero from '@site/src/components/common/Hero';
+import styles from './use-case.module.css';
+
+<Hero
+  title={<>Accelerate Existing Hadoop Deployments<br/><span className="hero-subtitle">With Apache Ignite</span></>}
+  description="Accelerate the performance of Hadoop-based applications with Ignite as a high-performance data access layer"
+  primaryButton={{
+    text: "Start Coding",
+    href: "https://ignite.apache.org/docs/latest/index"
+  }}
+  image="/img/usecases/hadoop/hero-image.svg"
+/>
+
+## Benefits Of Using Apache Ignite
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <h3>Real-time analytics</h3>
+    <p>Apache Ignite enables real-time analytics across Apache Hadoop operational and historical data silos.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>Low-latency and high-throughput operations</h3>
+    <p>Ignite enables low-latency and high-throughput access while Hadoop continues to be used for long-running OLAP workloads.</p>
+  </div>
+</div>
+
+## How Does Apache Ignite Acceleration Work?
+
+To achieve the performance acceleration of Hadoop-based systems, deploy Ignite as a separate distributed storage that maintains the data sets required for your low-latency operations or real-time reports.
+
+<div className={styles.architectureImage}>
+  <img src="/img/usecases/hadoop/image.svg" alt="Hadoop acceleration architecture" />
+</div>
+
+### There are 3 basic steps:
+
+**01** Depending on the data volume and available memory capacity, you can enable [Ignite native persistence](/architecture/native-persistence) to store historical data sets on disk while dedicating a memory space for operational records.
+
+You can continue to use Hadoop as storage for less frequently-used data or for long-running and ad-hoc analytical queries.
+
+**02** Your applications and services should use Ignite native APIs to process the data residing in the in-memory cluster. Ignite provides SQL, compute (aka. map-reduce), and machine learning APIs for various data processing needs.
+
+**03** Consider using Apache Spark DataFrames APIs if an application needs to run federated or cross-database queries across Ignite and Hadoop clusters.
+
+Ignite is [integrated with Spark](/use-cases/spark-acceleration), which natively supports Hive/Hadoop. Cross-database queries should be considered only for a limited number of scenarios when neither Ignite nor Hadoop contains the entire data set.
+
+## How Can You Split Data And Operations Between Ignite And Hadoop?
+
+<div className={styles.twoColumnLayout}>
+  <div>
+    <p><strong>Use Apache Ignite for tasks that require:</strong></p>
+    <p>Low-latency response time (microseconds, milliseconds, seconds)</p>
+    <p>High-throughput operations (thousands and millions of operations per second)</p>
+    <p>Real-time processing</p>
+  </div>
+
+  <div>
+    <p><strong>Continue using Apache Hadoop for:</strong></p>
+    <p>High-latency operations (dozens of seconds, minutes, hours)</p>
+    <p>Batch processing</p>
+  </div>
+</div>
+
+## 5 Steps To Implement The Architecture In Practice
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <h3>01</h3>
+    <p>Download and install Apache Ignite to your system.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>02</h3>
+    <p><strong>Select a list of operations for Ignite.</strong></p>
+    <p>The best operations are those that require low-latency response time, high-throughput, and real-time analytics.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>03</h3>
+    <p><strong>Consider enabling Ignite native persistence,</strong> or use Ignite as a pure in-memory cache, or in-memory data grid that persists changes to Hadoop or another external database.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>04</h3>
+    <p><strong>Update your applications</strong></p>
+    <p>Ensure they use Ignite native APIs to process Ignite data and Spark for federated queries.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>05</h3>
+    <p><strong>If you need to replicate changes between Ignite and Hadoop clusters, use existing change-data-capture solutions:</strong></p>
+    <p>Debezium, Kafka, GridGain Data Lake Accelerator, Oracle GoldenGate</p>
+    <p>To write-through changes to Hadoop directly, implement <a href="https://ignite.apache.org/docs/latest/persistence/external-storage" target="_blank">Ignite's CacheStore</a> interface.</p>
+  </div>
+</div>
+
+---
+
+## Ready to Start?
+
+Discover our quick start guide and build your first application in 5-10 minutes.
+
+[Quick Start Guide](https://ignite.apache.org/docs/latest/) →
+
+## Want to Learn More?
+
+Read the Apache Spark acceleration article.
+
+[Apache Spark Acceleration](/use-cases/spark-acceleration) →

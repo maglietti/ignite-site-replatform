@@ -1,0 +1,180 @@
+---
+title: Apache Ignite Services, Distributed Service Grid
+description: Apache Ignite Service Grid allows to deploy various types of singleton services in the cluster or multiple service instances. Build a fault-tolerant, scalable, high-performant, microservice-based solution with Apache Ignite.
+---
+
+import CodeTabs from '@site/src/components/features/CodeTabs';
+import styles from './service-apis.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Service APIs</h1>
+        <p className={styles.heroDescription}>
+          Deploy your microservices straight on the cluster nodes and<br />trigger execution from the application code
+        </p>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/service/service-hero.svg" alt="Service APIs" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.overview}>
+  <div className="container">
+    <h2>Apache Ignite Service APIs Overview</h2>
+    <p className={styles.overviewText}>
+      With the services API, you can create and deploy arbitrary services on the cluster. For instance, you
+      may want to implement custom counters, hierarchical maps, or anything that you treat as a microservice.
+    </p>
+  </div>
+</section>
+
+<section className={styles.codeSection}>
+  <div className="container">
+    <h2 className="h4">Use Contemporary Powerful Languages</h2>
+    <p className={styles.codeDescription}>
+      Create scalable microservices in languages such as Java or C#
+    </p>
+
+    <CodeTabs
+      examples={[
+        {
+          language: 'java',
+          label: 'Java',
+          code: `Ignite ignite = Ignition.start();
+
+//get the services interface associated with all server nodes
+IgniteServices services = ignite.services();
+
+//start a node singleton
+services.deployClusterSingleton("myCounterService", new MyCounterServiceImpl());`
+        }
+      ]}
+    />
+  </div>
+</section>
+
+<section className={styles.deployment}>
+  <div className="container">
+    <h2 className="h4">Services Deployment Modes</h2>
+    <p className={styles.subtitle}>Deploy single or many instances of a service on the cluster</p>
+
+    <div className={styles.deploymentModes}>
+      <div className={styles.modeItem}>
+        <div className={styles.modeContent}>
+          <h3>Cluster Singleton</h3>
+          <p>
+            The most commonly used feature is to deploy singleton services on the cluster.
+          </p>
+          <p>
+            There is only one instance of the service in the cluster, and Ignite guarantees that the instance
+            is always available.
+          </p>
+          <p>
+            In case the cluster node on which the service is deployed disconnects, Ignite automatically
+            redeploys the instance to another node.
+          </p>
+        </div>
+        <img src="/img/features/service/one-image.svg" alt="Cluster Singleton" className={styles.modeImage} />
+      </div>
+
+      <div className={styles.modeItem + ' ' + styles.modeReverse}>
+        <img src="/img/features/service/two-image.svg" alt="Node Singleton" className={styles.modeImage} />
+        <div className={styles.modeContent}>
+          <h3>Node Singleton</h3>
+          <p>
+            You can specify your service as part of the node configuration and start the service together
+            with the node.
+          </p>
+          <p>
+            The service is started on each node of the cluster. If the service is a cluster singleton, it
+            is started in the first cluster node, and is redeployed to one of the other nodes if the first
+            node terminates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.benefits}>
+  <div className="container">
+    <h2>Benefits Of Apache Ignite Service APIs</h2>
+
+    <div className={styles.benefitsGrid}>
+      <div className={styles.benefitItem}>
+        <div className={styles.benefitBullet}></div>
+        <div>
+          <h3>Load balancing</h3>
+          <p>
+            In all cases, other than singleton service deployment, Ignite makes sure that an equal number
+            of services are deployed on each node within the cluster.
+          </p>
+          <p>
+            Whenever cluster topology changes, Ignite will re-evaluate service deployments and may re-deploy
+            an already deployed service on another node for better load balancing.
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.benefitItem}>
+        <div className={styles.benefitBullet}></div>
+        <div>
+          <h3>Fault Tolerance</h3>
+          <p>
+            Ignite always guarantees that services are continuously available, and are deployed according to
+            the specified configuration, regardless of any topology changes or node crashes.
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.benefitItem}>
+        <div className={styles.benefitBullet}></div>
+        <div>
+          <h3>Hot Redeployment</h3>
+          <p>
+            You can update the implementation of a service without stopping the cluster.
+          </p>
+          <p>
+            Use Ignite's DeploymentSpi configuration to re-deploy services without restarting the cluster.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Start coding with Ignite Service APIs</p>
+        <a href="https://ignite.apache.org/docs/latest/services/services" className="arrowlink" target="_blank">
+          Performing Service APIs
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Check out a special tutorial that shows how to build and deploy microservices with Ignite Service APIs</p>
+        <a href="https://www.gridgain.com/resources/blog/implementing-microservices-apache-ignite-service-apis-part-iii" className="arrowlink" target="_blank">
+          Implementing Microservices With Apache Ignite Service APIs
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

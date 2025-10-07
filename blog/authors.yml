@@ -1,25 +1,29 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+denis_magda:
+  name: Denis Magda
+  title: Apache Ignite PMC Chair
+  url: https://github.com/dmagda
+  image_url: https://github.com/dmagda.png
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+stanislav_lukyanov:
+  name: Stanislav Lukyanov
+  title: Apache Ignite Committer
+  url: https://github.com/slukyanov
+  image_url: https://github.com/slukyanov.png
+
+pavel_tupitsyn:
+  name: Pavel Tupitsyn
+  title: Apache Ignite Committer
+  url: https://github.com/ptupitsyn
+  image_url: https://github.com/ptupitsyn.png
+
+maxim_muzafarov:
+  name: Maxim Muzafarov
+  title: Apache Ignite Committer
+  url: https://github.com/mmuzaf
+  image_url: https://github.com/mmuzaf.png
+
+nikita_amelchev:
+  name: Nikita Amelchev
+  title: Apache Ignite Committer
+  url: https://github.com/amelchev
+  image_url: https://github.com/amelchev.png

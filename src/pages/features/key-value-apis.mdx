@@ -1,0 +1,177 @@
+---
+title: Distributed Key-Value APIs - Apache Ignite
+description: Apache Ignite as a distributed key-value store is supported for different caching techniques. Ignite key-value APIs allow to create database key-value tables on-chain and increase processing performance.
+---
+
+import styles from './key-value-apis.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Distributed<br />Key-Value APIs</h1>
+        <p className={styles.heroDescription}>
+          Query your distributed data in the fastest way possible<br />with key-value APIs
+        </p>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/key-value/hero.svg" alt="Key-Value APIs" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.overview}>
+  <div className="container">
+    <div className={styles.overviewContent}>
+      <div className={styles.overviewText}>
+        <h2 className="capstext">Key-Value APIs Overview</h2>
+        <p>
+          Every record in Ignite is stored as a key-value pair. All the records are distributed evenly
+          across the cluster nodes. Your key-value queries are directed automatically to the nodes that
+          store requested data. This is how Ignite utilizes all the given memory, disk, and CPU resources.
+        </p>
+        <p>Key-value APIs are supported by all existing Ignite client libraries:</p>
+        <div className={styles.languages}>
+          <p className="h5">Java <small>(implements JSR-107 specification known as JCache)</small></p>
+          <p className="h5">.NET</p>
+          <p className="h5">Python</p>
+          <p className="h5">Node.JS</p>
+          <p className="h5">Your language</p>
+        </div>
+      </div>
+      <div className={styles.overviewImage}>
+        <img src="/img/features/key-value/key-value-api-pic.svg" alt="Key-Value Overview" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.highlight}>
+  <div className="container">
+    <p className={styles.highlightText}>
+      Apache Ignite key-value APIs provide additional capabilities such as <strong>automatic synchronization</strong> with
+      external databases, <strong>near caching</strong> and <strong>ACID transactions.</strong>
+    </p>
+  </div>
+</section>
+
+<section className={styles.feature}>
+  <div className="container">
+    <div className={styles.featureContent}>
+      <div className={styles.featureText}>
+        <h3>Automatic Synchronization With External Databases To Keep A Consistent Copy Of Data</h3>
+        <p>Two synchronization strategies are available in Apache Ignite: write-through/behind and read-through.</p>
+
+        <dl className={styles.definitionBox}>
+          <dt>Write-through and write-behind capabilities</dt>
+          <dd>
+            Ignite can automatically write-through or write-behind all the changes to an external database
+            for every key-value request issued by your applications.
+          </dd>
+        </dl>
+
+        <dl className={styles.definitionBox}>
+          <dt>Read-through capabilities</dt>
+          <dd>
+            Read-through means that Ignite can automatically load data from an external database if a record
+            is missing in memory.
+          </dd>
+        </dl>
+      </div>
+      <div className={styles.featureImage}>
+        <img src="/img/features/key-value/key-value-api-2.svg" alt="Synchronization" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.feature + ' ' + styles.featureReverse}>
+  <div className="container">
+    <div className={styles.featureContent}>
+      <div className={styles.featureImage}>
+        <img src="/img/features/key-value/key-value-api-3.svg" alt="Near Cache" />
+        <div className={styles.imageCaption}>
+          <p>1. Call to the near cache</p>
+          <p>2. Call to the Ignite cluster <span>(if a record is not found in the near cache)</span></p>
+          <p>3. Read-through from the external database <span>(if the record is not in the Ignite cluster yet)</span></p>
+        </div>
+      </div>
+      <div className={styles.featureText}>
+        <h3>Near Cache To Process Your Requests In Microseconds</h3>
+        <p>
+          A near cache is a local client-side cache that stores the most frequently used data on the
+          application end.
+        </p>
+
+        <h4>How it works</h4>
+        <p>
+          It is applied to applications that require a consistent response time of a few <strong>microseconds.</strong> Ignite
+          automatically invalidates and updates the near cache.
+        </p>
+        <p>
+          Whenever the primary copy of a record gets updated on a server node, Ignite propagates the change
+          to all the nodes that store the record's backup copy, as well as to the applications that keep
+          the record's copy in their near caches.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.feature}>
+  <div className="container">
+    <div className={styles.featureContent}>
+      <div className={styles.featureText}>
+        <h3>ACID Transactions To Update Your Distributed Records Consistently</h3>
+        <p>
+          Apache Ignite key-value APIs are fully transactional, which means that data can be updated
+          consistently and reliably.
+        </p>
+
+        <h4>How it works</h4>
+        <p>
+          An Ignite transaction can update multiple records from different tables stored on different
+          cluster nodes. Ignite can even span a transaction to an underlying relational database. Ignite
+          implements{' '}
+          <a href="/features/acid-transactions">two-phase-commit protocol to ensure data consistency at scale.</a>
+        </p>
+      </div>
+      <div className={styles.featureImage}>
+        <img src="/img/features/key-value/key-value-api-4.svg" alt="ACID Transactions" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Create your first application using Ignite key-value APIs</p>
+        <a href="https://ignite.apache.org/docs/latest/key-value-api/basic-cache-operations" className="arrowlink" target="_blank">
+          Using Key-Value APIs
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Check out how Apache Ignite can be configured and used as a standard key-value store</p>
+        <a href="/use-cases/key-value-store" className="arrowlink">
+          Key-Value Store
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

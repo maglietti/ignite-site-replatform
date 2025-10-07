@@ -1,19 +1,59 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+release:
+  label: Release
+  permalink: /release
+  description: Apache Ignite release announcements
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+apache:
+  label: Apache
+  permalink: /apache
+  description: Apache Software Foundation related content
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+ignite:
+  label: Ignite
+  permalink: /ignite
+  description: Apache Ignite platform updates
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+sql:
+  label: SQL
+  permalink: /sql
+  description: SQL and database features
+
+performance:
+  label: Performance
+  permalink: /performance
+  description: Performance optimization and benchmarks
+
+in-memory:
+  label: In-Memory
+  permalink: /in-memory
+  description: In-memory computing concepts
+
+machine-learning:
+  label: Machine Learning
+  permalink: /machine-learning
+  description: Machine learning and AI features
+
+spark:
+  label: Spark
+  permalink: /spark
+  description: Apache Spark integration
+
+dotnet:
+  label: .NET
+  permalink: /dotnet
+  description: .NET platform support
+
+security:
+  label: Security
+  permalink: /security
+  description: Security updates and features
+
+community:
+  label: Community
+  permalink: /community
+  description: Community news and updates
+
+meetup:
+  label: Meetup
+  permalink: /meetup
+  description: Meetups and events

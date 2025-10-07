@@ -1,0 +1,502 @@
+/* Hero Section */
+.hero {
+  padding: 4rem 0 7rem;
+  background: var(--ifm-color-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.heroText {
+  flex: 1;
+}
+
+.heroLabel {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 6rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.heroImage {
+  position: absolute;
+  top: -68px;
+  right: -110px;
+  max-width: 500px;
+  height: auto;
+}
+
+/* Download Title Section */
+.downloadTitle {
+  padding-top: 11rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
+.downloadTitle p {
+  font-size: 3.2rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Navigation Block */
+.navBlock {
+  width: 100%;
+  position: sticky;
+  top: 60px;
+  background: white;
+  z-index: 100;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navList li {
+  display: flex;
+}
+
+.navList button {
+  background: none;
+  border: none;
+  padding: 2rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  line-height: 1.3;
+  border-bottom: 3px solid transparent;
+}
+
+.navList button:hover {
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.navActive {
+  color: var(--ifm-color-primary) !important;
+  border-bottom-color: var(--ifm-color-primary) !important;
+}
+
+/* Sections */
+.section {
+  padding: 8rem 0;
+}
+
+.sectionSlim {
+  padding: 8rem 0 4rem;
+}
+
+.sectionTitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  color: var(--ifm-font-color-base);
+}
+
+.subsectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+/* Tables */
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.tableScroller {
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.downloadTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.downloadTable th,
+.downloadTable td {
+  padding: 2rem 3rem;
+  text-align: left;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  vertical-align: middle;
+}
+
+.downloadTable th {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  height: 9rem;
+}
+
+.downloadTable td {
+  font-size: 1.4rem;
+  height: 6rem;
+  white-space: nowrap;
+}
+
+.downloadTable tr:last-child td {
+  border-bottom: none;
+}
+
+.downloadTable th:first-child,
+.downloadTable td:first-child {
+  padding-left: 3rem;
+}
+
+.downloadTable th:last-child,
+.downloadTable td:last-child {
+  padding-right: 3rem;
+}
+
+.downloadTable a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.downloadTable a:hover {
+  text-decoration: underline;
+}
+
+.downloadTable td a:not(:last-child)::after {
+  content: ', ';
+  display: inline;
+  margin-right: 5px;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.linksCell {
+  white-space: normal !important;
+}
+
+.sourceLink::after {
+  display: none !important;
+}
+
+.dockerTable td {
+  height: auto;
+  padding: 2rem 3rem;
+  vertical-align: top;
+  white-space: normal;
+}
+
+/* Tabs */
+.tabs {
+  margin-bottom: 2rem;
+}
+
+.tabButtons {
+  display: flex;
+  gap: 0;
+  margin-bottom: -1px;
+}
+
+.tabButtons button {
+  background: var(--ifm-color-emphasis-200);
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 1rem 1rem 0 0;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: none;
+}
+
+.tabButtons button:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+.tabActive {
+  background: var(--ifm-color-emphasis-100) !important;
+  color: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-color-emphasis-200) !important;
+}
+
+.tabContent {
+  border-radius: 0 1rem 1rem 1rem;
+  overflow: hidden;
+}
+
+/* Bottom Notes */
+.bottomNote {
+  margin-top: 5rem;
+  max-width: 768px;
+}
+
+.bottomNote p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.binaryHeader {
+  max-width: 768px;
+  margin-bottom: 5rem;
+}
+
+.binaryHeader p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.archiveNote {
+  margin-top: 5rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* Verification Section */
+.verifySection {
+  padding: 5rem 0;
+}
+
+.verifyContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  margin-top: 4rem;
+}
+
+.verifyLeft {
+  flex: 1;
+}
+
+.verifyLeft p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.verifyRight {
+  flex: 1;
+  max-width: 648px;
+}
+
+.verifyRight p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.verifyCode {
+  margin-top: 2rem;
+}
+
+/* Extensions */
+.extensionBinaryTitle {
+  margin-top: 5rem;
+}
+
+.extensionNote {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.springBootNote {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+/* 3rd Party */
+.partyContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  margin-top: 5rem;
+}
+
+.partyLeft {
+  flex: 1;
+  max-width: 542px;
+}
+
+.partyLeft p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.partyRight {
+  flex: 1;
+  max-width: 542px;
+}
+
+.partyRight p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1440px) {
+  .navList {
+    justify-content: space-between;
+  }
+
+  .navList button {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .verifyContent,
+  .partyContent {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .verifyLeft,
+  .verifyRight,
+  .partyLeft,
+  .partyRight {
+    max-width: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .navBlock {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .navList {
+    justify-content: flex-start;
+    min-width: max-content;
+  }
+
+  .heroImage {
+    display: none;
+  }
+
+  .heroTitle {
+    font-size: 4.8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .downloadTitle {
+    padding-top: 7rem;
+  }
+
+  .downloadTitle p {
+    font-size: 2.4rem;
+  }
+
+  .downloadTitle br {
+    display: none;
+  }
+
+  .sectionTitle {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+
+  .subsectionTitle {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .tableWrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+
+  .tableWrapper::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    background: linear-gradient(270deg, #ffffff, transparent);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .tableScroller {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .downloadTable th,
+  .downloadTable td {
+    padding: 2rem;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .sectionSlim {
+    padding: 5rem 0 2rem;
+  }
+
+  .heroTitle {
+    font-size: 3.6rem;
+  }
+
+  .heroLabel {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    padding: 3rem 0 5rem;
+  }
+
+  .verifyContent,
+  .partyContent {
+    margin-top: 2rem;
+  }
+
+  .navList button {
+    font-size: 1.4rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .tabButtons button {
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+  }
+}

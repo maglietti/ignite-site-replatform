@@ -1,0 +1,148 @@
+---
+title: In-Memory Database
+description: Apache Ignite, as the best open source in-memory database, is a high-performance system-of-records that can store and query large data sets from memory and disk without requiring to warm up the memory tier on cluster restarts.
+---
+
+import Hero from '@site/src/components/common/Hero';
+import styles from './use-case.module.css';
+
+<Hero
+  title={<>In-Memory Database<br/><span className="hero-subtitle">With Apache Ignite</span></>}
+  description="In-memory database that scales horizontally across memory and disk with full SQL support"
+  primaryButton={{
+    text: "Start Coding",
+    href: "https://ignite.apache.org/docs/latest/index"
+  }}
+  image="/img/usecases/database/hero-image.svg"
+/>
+
+## In-Memory Database Overview
+
+### What is an in-memory database?
+
+An in-memory database (IMDB) is a data management system that stores data primarily in the computer's main memory.
+
+### How does an in-memory database work?
+
+In-memory databases rely on spinning disks for data storage. IMDBs allow mission-critical applications to benefit from faster response times than disk-based databases.
+
+<div className={styles.architectureImage}>
+  <img src="/img/usecases/database/image.svg" alt="In-memory database architecture" />
+</div>
+
+## Apache Ignite as a Distributed In-Memory Database
+
+Apache Ignite as a distributed in-memory database scales horizontally across memory and disk without compromise.
+
+Apache Ignite works with memory, disk, and Intel Optane as active storage tiers.
+
+This [multi-tier](/architecture/multi-tier-storage) architecture combines the advantages of in-memory computing with disk durability and strong consistency, all in one system.
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <h3>Speed of memory</h3>
+  </div>
+  <div className={styles.benefitItem}>
+    <h3>Strong consistency</h3>
+  </div>
+  <div className={styles.benefitItem}>
+    <h3>Durability of disk</h3>
+  </div>
+</div>
+
+## Advantages Of Ignite Multi-Tiered Architecture
+
+<div className={styles.benefitsGrid}>
+  <div className={styles.benefitItem}>
+    <h3>Instantaneous cluster restarts</h3>
+    <p>Ignite becomes fully operational from disk upon a cluster startup or restarts without requiring a preload or a warm-up the memory tier.</p>
+  </div>
+
+  <div className={styles.benefitItem}>
+    <h3>Multi-tiered storage</h3>
+    <p>Ignite treats disk as an active storage layer, allowing it to cache a subset of the data in memory and query both in-memory and disk-only records with SQL and all other available APIs.</p>
+  </div>
+</div>
+
+## Apache Ignite as an In-Memory Database Supports a Variety of Developer APIs
+
+<div className={styles.apiGrid}>
+  <div>
+    <h3>Essential Developer APIs</h3>
+    <div className={styles.apiItem}>
+      <img src="/img/features/03-distributed-SQL.svg" alt="SQL" />
+      <p>SQL</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/05-key-value-APIs.svg" alt="Key-Value" />
+      <p>Key-value</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/04-ACID-transactions.svg" alt="ACID Transactions" />
+      <p>ACID transactions</p>
+    </div>
+    <p>Enable you to request, join, and group distributed datasets.</p>
+  </div>
+
+  <div>
+    <h3>High-Performance Computing APIs</h3>
+    <div className={styles.apiItem}>
+      <img src="/img/features/06-compute-APIs.svg" alt="Compute" />
+      <p>Compute</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/07-machine-learning.svg" alt="Machine Learning" />
+      <p>Machine learning</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/08-services.svg" alt="Services" />
+      <p>Services</p>
+    </div>
+    <p>Execute logic close to the data, thus eliminating expensive data shuffling over the network.</p>
+  </div>
+
+  <div>
+    <h3>Real-Time Streaming APIs</h3>
+    <div className={styles.apiItem}>
+      <img src="/img/features/09-streaming.svg" alt="Streaming" />
+      <p>Streaming</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/10-continuous-queries.svg" alt="Continuous Queries" />
+      <p>Continuous Queries</p>
+    </div>
+    <div className={styles.apiItem}>
+      <img src="/img/features/11-messaging.svg" alt="Messaging" />
+      <p>Messaging</p>
+    </div>
+    <p>Allow the seamless implementation of event-driven architectures.</p>
+  </div>
+</div>
+
+## In-Memory Database Ignite User Stories
+
+### BNP Paribas
+
+With the help of Apache Ignite, BNP Paribas managed to design, build, and optimize a hybrid transactional-analytical processing (HTAP) solution. This enabled the bank to make key business decisions in real time.
+
+[Watch: Apache Ignite As A Hybrid Transactional-Analytical Processing Solution At A Large Investment Bank](https://www.youtube.com/watch?v=-t-Syy9blXQ)
+
+### JP MorganChase
+
+JPMorgan Chase faced an increasing need to apply transformations to large datasets in real time. To meet this need, their team selected Ignite to achieve persistence, caching and integrated compute.
+
+[Watch: Real Time Exposure Management Using Ignite](https://www.youtube.com/watch?v=B8A8yR_e6VM&t=2s)
+
+---
+
+## Ready to Start?
+
+Discover our quick start guide and build your first application in 5-10 minutes.
+
+[Quick Start Guide](https://ignite.apache.org/docs/latest/) →
+
+## Want to View More Use-Cases?
+
+Read the In-Memory Cache article.
+
+[In-Memory Cache](/use-cases/in-memory-cache) →

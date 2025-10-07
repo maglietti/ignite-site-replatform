@@ -1,0 +1,114 @@
+---
+title: Multi-Tier Storage
+description: Apache Ignite multi-tier storage uses memory, disk, and Intel Optane as active storage tiers to provide the speed of memory with the consistency of disk-based databases without the need for memory warm-ups on restarts.
+---
+
+import CodeTabs from '@site/src/components/features/CodeTabs';
+
+# Multi-Tier Storage
+
+<div className="hero-subtitle">
+Store and access your data across memory and disk without compromise
+</div>
+
+<div className="hero-actions">
+  <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+    Start Coding
+  </a>
+</div>
+
+![Multi-Tier Storage](/img/usecases/in-memory-hero.svg)
+
+## Overview
+
+Apache Ignite multi-tier storage implements a cutting-edge storage architecture that combines performance benefits of memory with the scalability and durability advantages of disk-based databases.
+
+## Primary Multi-Tier Storage Usage Modes
+
+### In-Memory Mode
+
+Get all the benefits of in-memory computing solutions. Store and process data at the lowest latency and highest throughput.
+
+![In-Memory Mode](/img/features/multitier/01-bd.svg)
+
+#### How It Works
+
+The whole data set is available in memory tier only.
+
+In order to survive node failures, we recommend keeping at least one backup copy of the data in the cluster. DRAM or Intel® Optane™ operating in the Memory Mode can be used as a storage device.
+
+#### Use-Cases
+
+- In-memory caching
+- High-performance computing
+- Web-session caching
+- Real-time processing of continuous data streams
+
+#### In-Memory Mode Case-Study
+
+Watch how Raiffeisen Bank uses in-memory mode to store their data:
+
+**Video:** [How To Use Apache Ignite To Resque The Backend Of The Bank](https://www.youtube.com/watch?v=Mhtt2QL_qCQ&t=639s)
+
+---
+
+### In-Memory + External Database Mode
+
+Accelerate and offload your existing databases by deploying Ignite as a caching layer on top of existing disk-based databases and back-end systems.
+
+![In-Memory + External Database Mode](/img/features/multitier/03-bd.svg)
+
+#### How It Works
+
+Ignite slides in between your existing application and data layer. Ignite [writes-through](https://ignite.apache.org/docs/latest/persistence/external-storage#read-through-and-write-through) or [writes-behind](https://ignite.apache.org/docs/latest/persistence/external-storage#write-behind-caching) all data modifications to the underlying external databases.
+
+#### Use-Cases
+
+Offloading and acceleration of existing databases, backend-systems, applications and APIs.
+
+#### In-Memory + External Database Mode Case-Study
+
+Watch how ING transformed their core banking system with Apache Ignite:
+
+**Video:** [Embracing The Service Consumption Shift In Banking](https://www.youtube.com/watch?v=CPmwnjDJ1Sk)
+
+---
+
+### Multi-Tier Database Mode
+
+Scale beyond the available memory capacity and skip memory warm-ups on restarts.
+
+![Multi-Tier Database Mode](/img/features/multitier/04-bd.svg)
+
+#### How It Works
+
+100% of data is persisted to Ignite native persistence, and the same amount or less is cached in memory. The more data cached, the faster the performance.
+
+Applications can query both in-memory and disk-only records transparently scaling beyond available memory capacity.
+
+There is no need for memory warm-ups on restarts since Ignite can serve data from disk. SSD, Flash, HDD or Intel® Optane™ operating in the AppDirect Mode can be used as a storage device.
+
+#### Use-Cases
+
+Ignite as a distributed database for HTAP workloads or digital integration hub with the active persistence layer.
+
+#### Native Persistence Case-Study
+
+Watch how JP Morgan uses Ignite to achieve persistence, caching and integrated compute:
+
+**Video:** [How To Use Apache Ignite To Resque The Backend Of The Bank](https://www.youtube.com/watch?v=jF9T2cJB6t0&t=137s)
+
+---
+
+## Ready to Start?
+
+Discover more details about multi-tier storage and configure it for your use-case.
+
+- [Configure Native Persistence](https://ignite.apache.org/docs/latest/persistence/native-persistence)
+- [Multi-Tier Storage Implementation Details](https://cwiki.apache.org/confluence/display/IGNITE/Ignite+Multi-Tier+Storage+-+under+the+hood)
+
+## Want to Learn More?
+
+Check out the multi-tier storage implementation details article:
+
+- [Multi-Tier Storage Implementation Details](https://cwiki.apache.org/confluence/display/IGNITE/Ignite+Multi-Tier+Storage+-+under+the+hood)

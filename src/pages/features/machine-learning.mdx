@@ -1,0 +1,145 @@
+---
+title: Continuous Machine Learning, Scalable Deep Learning - Apache Ignite
+description: Apache Ignite Machine Learning is a set of simple and efficient APIs to enable continuous learning. It relies on Ignite's multi-tier storage that bring massive scalability for machine learning and deep learning tasks.
+---
+
+import styles from './machine-learning.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Machine Learning<br />APIs</h1>
+        <p className={styles.heroDescription}>
+          Continuously train, execute and update your machine learning<br />models at scale and in real time
+        </p>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/machinelearning/machine.svg" alt="Machine Learning" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.overview}>
+  <div className="container">
+    <div className={styles.overviewContent}>
+      <div className={styles.overviewText}>
+        <h2>Ignite Machine Learning APIs Overview</h2>
+        <p>
+          Ignite Machine Learning (ML) is a set of simple, scalable, and efficient tools that allow building
+          predictive machine learning models without costly data transfers.
+        </p>
+
+        <h3>How does Apache Ignite support ML APIs?</h3>
+        <p>You have two options:</p>
+
+        <div className={styles.options}>
+          <div className={styles.option}>
+            <div className={styles.optionNumber}>01</div>
+            <div>
+              <p>Use built-in ML APIs for some of the typical ML and deep learning (DL) tasks, such as:</p>
+              <div className={styles.optionList}>
+                <span>Classification</span>
+                <span>Regression</span>
+                <span>Clustering</span>
+                <span>Recommendation</span>
+                <span>Preprocessing</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.option}>
+            <div className={styles.optionNumber}>02</div>
+            <div>
+              <p>Use external ML and DL libraries that use Apache Ignite as scalable and high-performance distributed data storage:</p>
+              <div className={styles.optionList}>
+                <span>TensorFlow</span>
+                <span>Scikit</span>
+                <span>Spark</span>
+                <span>And more</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="/img/features/machinelearning/image.svg" alt="ML Overview" className={styles.overviewImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.benefits}>
+  <div className="container">
+    <h2>Benefits of Apache Ignite Machine Learning APIs</h2>
+
+    <div className={styles.benefitsList}>
+      <div className={styles.benefitItem}>
+        <h3>Expedite the training process with horizontally scalable cluster</h3>
+        <div className={styles.benefitContent}>
+          <p>
+            You can distribute your training data set over an unlimited number of cluster nodes and train
+            your models with the speed of memory. With built-in Ignite ML APIs, you:
+          </p>
+          <ul>
+            <li>Avoid, or minimise ETL</li>
+            <li>Load all your training data sets in the same cluster</li>
+            <li>Minimise network utilization during the training process</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className={styles.benefitItem}>
+        <h3>Execute your ML models with in-memory speed from your application code</h3>
+        <div className={styles.benefitContent}>
+          <p>
+            Once the model is trained, deploy it on the cluster and execute it with in-memory speed.
+            Use built-in Ignite APIs or 3rd party libraries.
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.benefitItem}>
+        <h3>Continue updating your models with new data in real time</h3>
+        <div className={styles.benefitContent}>
+          <p>
+            Data and user behavior change rapidly, so you must constantly update your models. With Apache
+            Ignite, you can update your already deployed ML models with new data sets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Start coding machine learning APIs</p>
+        <a href="https://ignite.apache.org/docs/latest/machine-learning/machine-learning" className="arrowlink" target="_blank">
+          Performing Machine Learning
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Check out how Apache Ignite updates trained models in real time</p>
+        <a href="https://ignite.apache.org/docs/latest/machine-learning/updating-trained-models" className="arrowlink" target="_blank">
+          Updating Trained Models
+        </a>
+      </article>
+    </div>
+  </div>
+</section>

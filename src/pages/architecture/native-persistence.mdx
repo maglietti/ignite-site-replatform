@@ -1,0 +1,199 @@
+---
+title: Native Persistence
+description: Apache Ignite native persistence is a distributed, ACID, and SQL-compliant disk-based store. It lets Ignite store more data on disk than it can cache in memory and enables fast cluster restarts.
+---
+
+import CodeTabs from '@site/src/components/features/CodeTabs';
+
+# Native Persistence
+
+<div className="hero-subtitle">
+Scale beyond available memory capacity and skip memory warm-ups on restarts
+</div>
+
+<div className="hero-actions">
+  <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+    Start Coding
+  </a>
+</div>
+
+![Native Persistence](/img/features/native-header.svg)
+
+---
+
+## The Ignite Advantage
+
+<div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', margin: '2rem 0'}}>
+
+<div>
+
+### Usually
+
+In-memory caches and databases provide limited persistence capabilities.
+
+For instance, some solutions create a backup copy of the in-memory data purely for restart purposes.
+
+</div>
+
+<div>
+
+### With Ignite
+
+Ignite persistence doesn't have any limitations. Our native persistence behaves like a classic disk-based database.
+
+</div>
+
+</div>
+
+---
+
+## Key Benefits
+
+<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', margin: '3rem 0'}}>
+
+<div>
+
+### Scale beyond memory capacity
+
+100% of data is always stored on disk. You decide how much memory to allocate to your data.
+
+</div>
+
+<div>
+
+### Just seconds needed for recovery
+
+Ignite becomes operational from disk instantaneously. There is no need to wait for the data to get preloaded on restarts.
+
+</div>
+
+<div>
+
+### Query in-memory and on-disk data
+
+If any record is missing in memory, then Ignite reads it from disk. This is supported for all the APIs including SQL.
+
+</div>
+
+</div>
+
+---
+
+## How It Works
+
+The native persistence functions as a distributed, ACID, and SQL-compliant disk-based store. It integrates into the Ignite [multi-tier storage](/architecture/multi-tier-storage) as a disk tier.
+
+When the native persistence is enabled, Ignite stores a superset of data on disk and caches as much as it can in memory.
+
+### Example
+
+If your application needs to store 200 records in an Ignite cluster and the memory capacity allows caching only 150 records, then all 200 will be stored on disk, out of which 150 will be served from memory while the rest 50 records from disk whenever the application requests them.
+
+---
+
+## Checkpointing And Write-Ahead Logging
+
+**Ensure Durability And Consistency Of Data**
+
+- Committed transactions always survive failures
+- The cluster can always be recovered to the latest successfully committed transaction
+
+---
+
+## Three-Step Process
+
+**Update Your Data At In-Memory Speed But Not Losing A Bit**
+
+![Native Persistence Process](/img/features/native-stepspic.svg)
+
+### Step 1: Write-Ahead Log
+
+As soon as the update comes from the application side, a record is updated in memory. Then, the change is added to the [write-ahead log (WAL)](https://ignite.apache.org/docs/latest/persistence/native-persistence.html#write-ahead-log).
+
+The purpose is to propagate updates to disk in the fastest way possible and provide a consistent recovery mechanism that remediates full cluster failures.
+
+### Step 2: Checkpointing
+
+As the WAL grows, it periodically gets checkpointed to the main storage.
+
+[Checkpointing](https://ignite.apache.org/docs/latest/persistence/native-persistence.html#checkpointing) is the process of copying dirty pages from the memory tier to the partition files on disk.
+
+> **Note:** A dirty page is a page that has been updated in memory and appended to the WAL, but has not yet been written to the respective partition file on disk.
+
+### Step 3: WAL Archival
+
+After a while, the information about updates in WAL can be removed, compressed or moved to archive.
+
+So you can reuse your disk space.
+
+---
+
+## Configuration
+
+**You Decide Which Data To Persist**
+
+Toggle a single configuration setting to turn a cluster into a database that scales across memory and disk.
+
+<CodeTabs
+  examples={[
+    {
+      language: 'xml',
+      label: 'XML',
+      code: `<bean class="org.apache.ignite.configuration.IgniteConfiguration">
+    <property name="dataStorageConfiguration">
+        <bean class="org.apache.ignite.configuration.DataStorageConfiguration">
+            <property name="defaultDataRegionConfiguration">
+                <bean class="org.apache.ignite.configuration.DataRegionConfiguration">
+                    <property name="persistenceEnabled" value="true"/>
+                </bean>
+            </property>
+        </bean>
+    </property>
+</bean>`
+    },
+    {
+      language: 'java',
+      label: 'Java',
+      code: `IgniteConfiguration cfg = new IgniteConfiguration();
+
+DataStorageConfiguration storageCfg = new DataStorageConfiguration();
+
+// Enable Ignite Persistence
+storageCfg.getDefaultDataRegionConfiguration().setPersistenceEnabled(true);
+
+// Using the new storage configuration
+cfg.setDataStorageConfiguration(storageCfg);`
+    },
+    {
+      language: 'csharp',
+      label: 'C#/.NET',
+      code: `var cfg = new IgniteConfiguration
+{
+    DataStorageConfiguration = new DataStorageConfiguration
+    {
+        DefaultDataRegionConfiguration = new DataRegionConfiguration
+        {
+            Name = "Default_Region",
+            PersistenceEnabled = true
+        }
+    }
+};`
+    }
+  ]}
+  defaultLanguage="xml"
+/>
+
+---
+
+## Ready to Start?
+
+Discover more details about native persistence and configure it for your use-case.
+
+- [Native Persistence Usage and Configuration](https://ignite.apache.org/docs/latest/persistence/native-persistence)
+
+## Want to Learn More?
+
+Check out the details of native persistence implementation, or watch a video:
+
+- [Native Persistence Implementation Details](https://cwiki.apache.org/confluence/display/IGNITE/Ignite+Persistent+Store+-+under+the+hood)
+- [Watch Video Tutorial](https://www.youtube.com/watch?v=6Yg5QW-XFVc&list=PLMc7NR20hA-I2EfyXeaSRHY5dRFtK_NF0&index=6)

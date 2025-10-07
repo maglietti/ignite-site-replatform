@@ -1,0 +1,272 @@
+@import './compute-apis.module.css';
+
+/* Intro Section */
+.intro {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.introContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.introContent > p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.speedHighlight {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.speedIcon {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.speedHighlight p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Core APIs Section */
+.coreApis {
+  padding: 80px 0;
+}
+
+.coreContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.coreText h2 {
+  margin-bottom: 32px;
+}
+
+.coreText h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.coreText p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.coreImage {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Used For Section */
+.usedFor {
+  padding: 80px 0;
+  background: var(--bg-secondary);
+}
+
+.usedFor h2 {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.usagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.usageBlock {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.usageItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.usageItem:last-child {
+  margin-bottom: 0;
+}
+
+.usageBullet {
+  width: 20px;
+  height: 20px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.usageItem span {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.frameworkIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.iconRow {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconRow img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Event Driven Section */
+.eventDriven {
+  padding: 80px 0;
+}
+
+.eventDriven h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.eventIntro {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+}
+
+.highlight {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principle {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.principleNumber {
+  width: 56px;
+  height: 56px;
+  background: var(--ifm-color-primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.principle p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.principleNote {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .coreContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .coreImage {
+    max-width: 400px;
+  }
+
+  .usagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .principlesGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .principle {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro,
+  .coreApis,
+  .usedFor,
+  .eventDriven {
+    padding: 60px 0;
+  }
+
+  .speedHighlight {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .iconRow {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .iconRow img {
+    height: 32px;
+  }
+}
+
+/* Dark Mode */
+[data-theme='dark'] .speedHighlight,
+[data-theme='dark'] .usageBlock {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-300);
+}

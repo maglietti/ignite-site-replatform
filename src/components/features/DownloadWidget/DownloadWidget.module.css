@@ -1,0 +1,299 @@
+/**
+ * DownloadWidget Component Styles
+ *
+ * Complex download interface with version selection and type tabs.
+ */
+
+.downloadWidget {
+  max-width: 700px;
+  margin: var(--space-xl) auto;
+  padding: var(--space-xl);
+  background: #fff;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.title {
+  margin: 0;
+  color: var(--ignite-dark-1);
+}
+
+.releaseNotes {
+  color: var(--ignite-blue-primary);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.releaseNotes:hover {
+  text-decoration: underline;
+}
+
+/* Version Selector */
+.versionSelect {
+  margin-bottom: var(--space-lg);
+}
+
+.label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  color: var(--ignite-dark-1);
+  font-size: 1.4rem;
+}
+
+.select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1.6rem;
+  border: 2px solid var(--ignite-grey-2);
+  border-radius: var(--border-radius-md);
+  background: #fff;
+  color: var(--ignite-dark-1);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.select:hover {
+  border-color: var(--ignite-blue-primary);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--ignite-blue-primary);
+  box-shadow: 0 0 0 3px rgba(0, 112, 204, 0.1);
+}
+
+/* Type Tabs */
+.typeTabs {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.typeTab {
+  flex: 1;
+  padding: var(--space-md);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--ignite-grey-5);
+  background: var(--ignite-grey-1);
+  border: 2px solid var(--ignite-grey-2);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.typeTab:hover {
+  background: var(--ignite-blue-pale);
+  border-color: var(--ignite-blue-light);
+}
+
+.typeTabActive {
+  color: #fff;
+  background: var(--ignite-blue-primary);
+  border-color: var(--ignite-blue-primary);
+}
+
+.typeTabActive:hover {
+  background: var(--ignite-blue-dark);
+  border-color: var(--ignite-blue-dark);
+}
+
+/* Download Info */
+.downloadInfo {
+  padding: var(--space-lg);
+  background: var(--ignite-blue-pale);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  font-size: 1.6rem;
+}
+
+.infoRow:last-of-type {
+  margin-bottom: 0;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: var(--ignite-dark-1);
+}
+
+.infoValue {
+  color: var(--ignite-grey-5);
+}
+
+.downloadAction {
+  margin-top: var(--space-lg);
+  text-align: center;
+}
+
+.downloadButton {
+  width: 100%;
+  max-width: 300px;
+}
+
+.noOption {
+  padding: var(--space-lg);
+  text-align: center;
+  color: var(--ignite-grey-5);
+  background: var(--ignite-grey-1);
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* Verification */
+.verification {
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--ignite-grey-2);
+}
+
+.verificationTitle {
+  margin-bottom: var(--space-sm);
+  color: var(--ignite-dark-1);
+}
+
+.verificationText {
+  margin-bottom: var(--space-md);
+  color: var(--ignite-grey-5);
+  font-size: 1.4rem;
+}
+
+.verificationLinks {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.verificationLink {
+  color: var(--ignite-blue-primary);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.verificationLink:hover {
+  text-decoration: underline;
+}
+
+.error {
+  padding: var(--space-lg);
+  text-align: center;
+  color: var(--ignite-red-primary);
+  background: var(--ignite-red-pale-2);
+  border-radius: var(--border-radius-md);
+}
+
+/* Dark mode */
+[data-theme='dark'] .downloadWidget {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .title,
+[data-theme='dark'] .label,
+[data-theme='dark'] .infoLabel {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .releaseNotes {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .select {
+  background: #1a1a1a;
+  border-color: #3d3d3d;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .select:hover,
+[data-theme='dark'] .select:focus {
+  border-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .typeTab {
+  background: #1a1a1a;
+  border-color: #3d3d3d;
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .typeTab:hover {
+  background: rgba(66, 165, 245, 0.1);
+  border-color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .typeTabActive {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff;
+}
+
+[data-theme='dark'] .downloadInfo {
+  background: rgba(66, 165, 245, 0.1);
+}
+
+[data-theme='dark'] .infoValue {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .noOption {
+  background: #1a1a1a;
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .verification {
+  border-top-color: #3d3d3d;
+}
+
+[data-theme='dark'] .verificationTitle {
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .verificationText {
+  color: var(--ifm-font-color-secondary);
+}
+
+[data-theme='dark'] .verificationLink {
+  color: var(--ifm-color-primary-light);
+}
+
+[data-theme='dark'] .error {
+  background: rgba(244, 67, 54, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .downloadWidget {
+    padding: var(--space-lg);
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .typeTabs {
+    flex-direction: column;
+  }
+
+  .downloadButton {
+    max-width: 100%;
+  }
+
+  .verificationLinks {
+    flex-direction: column;
+  }
+}

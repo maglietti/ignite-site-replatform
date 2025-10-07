@@ -1,0 +1,80 @@
+@import './compute-apis.module.css';
+
+/* Hero Section */
+.heroMain {
+  max-width: 500px;
+}
+
+/* Content Section */
+.content {
+  padding: 80px 0;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contentText p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.languageIcons {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.iconRow {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.langIcon {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.langIconLarge {
+  width: 140px;
+}
+
+/* Responsive Design */
+@media (max-width: 996px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .languageIcons {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 60px 0;
+  }
+
+  .langIcon {
+    width: 100px;
+  }
+
+  .langIconLarge {
+    width: 120px;
+  }
+
+  .iconRow {
+    gap: 16px;
+  }
+}

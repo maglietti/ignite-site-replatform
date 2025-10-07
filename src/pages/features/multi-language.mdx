@@ -1,0 +1,90 @@
+---
+title: Multi-language Support - Apache Ignite
+description: Apache Ignite provides multi-language support for Java, .NET/C#, C++, Python, Node.JS, PHP, and more programming languages.
+---
+
+import styles from './multi-language.module.css';
+
+<section className={styles.hero}>
+  <div className="container">
+    <div className={styles.heroContent}>
+      <div className={styles.heroMain}>
+        <p className={styles.heroPre}>Apache Ignite</p>
+        <h1 className={styles.heroTitle}>Multi-language<br />Support</h1>
+        <div className={styles.heroAction}>
+          <a href="https://ignite.apache.org/docs/latest/index" className="button button--primary">
+            Start Coding
+          </a>
+        </div>
+      </div>
+      <img src="/img/features/multilanguage/multi.svg" alt="Multi-language Support" className={styles.heroImage} />
+    </div>
+  </div>
+</section>
+
+<section className={styles.content}>
+  <div className="container">
+    <div className={styles.contentGrid}>
+      <div className={styles.contentText}>
+        <p>
+          Apache Ignite is a Java-powered database and computing platform that works with operating systems
+          and architectures supported by Java Virtual Machines. You can find Ignite deployments running on
+          Linux, Windows, Mac OS, Oracle Solaris, IBM zOS and x86, x64, SPARC, and PowerPC instruction set
+          architectures.
+        </p>
+        <p>
+          All the features and capabilities available in Ignite are supported in its Java libraries. This
+          includes SQL, key-value, co-located computations, machine learning algorithms, and much more.
+        </p>
+        <p>
+          In addition to Java, Ignite supports C#, C++, Python, Node.JS, and PHP languages out-of-the-box.
+          The thin client protocol allows expanding Ignite support to other programming languages. For instance,
+          you can find a Go client for Ignite that is not being developed or maintained by the Ignite community.
+        </p>
+        <p>
+          Furthermore, you can interact with Ignite as you would with any other SQL database with the usage
+          of JDBC or ODBC drivers.
+        </p>
+      </div>
+
+      <div className={styles.languageIcons}>
+        <div className={styles.iconRow}>
+          <img src="/img/features/multilanguage/one.svg" alt="Java" className={styles.langIcon} />
+          <img src="/img/features/multilanguage/two.svg" alt=".NET" className={styles.langIcon} />
+        </div>
+        <div className={styles.iconRow}>
+          <img src="/img/features/multilanguage/three.png" alt="C++" className={styles.langIcon} />
+          <img src="/img/features/multilanguage/four.png" alt="Python" className={styles.langIcon + ' ' + styles.langIconLarge} />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className={styles.ctaSection}>
+  <div className="container">
+    <div className={styles.ctaGrid}>
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-rocket.svg" alt="" className={styles.ctaIcon} />
+          <span>Ready to Start?</span>
+        </div>
+        <p>Discover our quick start guide and build your first application in 5-10 minutes</p>
+        <a href="https://ignite.apache.org/docs/latest/index" className="arrowlink" target="_blank">
+          Quick Start Guide
+        </a>
+      </article>
+
+      <article className={styles.ctaBlock}>
+        <div className={styles.ctaTitle}>
+          <img src="/img/features/native-docs.svg" alt="" className={styles.ctaIcon} />
+          <span>Want to Learn More?</span>
+        </div>
+        <p>Check out how to run Ignite with Java, .NET/C#, C++, Python, Node.JS, SQL, PHP, or REST API</p>
+        <a href="https://ignite.apache.org/docs/latest/quick-start/java" className="arrowlink" target="_blank">
+          Multi-Language Guide
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
